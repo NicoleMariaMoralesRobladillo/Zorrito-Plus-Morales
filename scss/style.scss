@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;700&display=swap");
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+html {
+  font-size: 85%;
+}
+* {
+  font-family: "Poppins", sans-serif;
+}
+$form-select-focus-width: 0;
+$navbar-toggler-border-radius: 0;
+$navbar-toggler-focus-width: 0;
+$navbar-toggler-transition: none;
+$form-select-focus-border-color: white;
+$form-select-indicator: url("../images/flecha-desplegable.svg");
+header {
+  background-image: linear-gradient(to bottom right, black 50%, #040c51 100%);
+}
+.logo-icon {
+  max-width: 8rem;
+}
+.nav-link {
+  font-family: "Readex Pro", sans-serif;
+}
+.nav-item {
+  text-align: center;
+}
+.navbar-toggler {
+  width: 35px;
+  height: 31px;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 0;
+  &__icon {
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    border-radius: 50px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+    &--top-bar {
+      margin-top: 0px;
+      -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+      transform: rotate(135deg);
+    }
+    &--middle-bar {
+      opacity: 0;
+      margin-top: 0px;
+      filter: alpha(opacity=0);
+    }
+    &--bottom-bar {
+      margin-top: 0px;
+      -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+      transform: rotate(-135deg);
+    }
+  }
+  &.collapsed {
+    .navbar-toggler__icon--top-bar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    .navbar-toggler__icon--middle-bar {
+      position: absolute;
+      opacity: 1;
+      filter: alpha(opacity=100);
+    }
+    .navbar-toggler__icon--bottom-bar {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  .navbar-nav-user {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.button {
+  font-family: "Readex Pro", sans-serif;
+  &:hover,
+  &:active {
+    transform: scale(1.1);
+  }
+}
+.zorrito-avatar {
+  max-width: 30rem !important;
+}
+.icono {
+  max-width: 8rem;
+  background-color: black;
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 10px;
+  &--netflix {
+    border-color: #f84440;
+  }
+  &--movistarPlay {
+    border-color: #009ff7;
+  }
+  &--disneyPlus {
+    border-color: #05009d;
+  }
+  &--starPlus {
+    border-color: #ff5400;
+  }
+  &--hboMax {
+    border-color: #9200bb;
+  }
+  &--primeVideo {
+    border-color: #d0009c;
+  }
+  &--spotify {
+    border-color: #18d860;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-nav-user {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 100%;
+  }
+}
