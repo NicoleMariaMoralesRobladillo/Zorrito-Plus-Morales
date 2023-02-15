@@ -1,3 +1,51 @@
+let usuarios = [];
+class Usuario {
+  constructor(usuario, contrasenia) {
+    this.usuario = usuario;
+    this.contrasenia = contrasenia;
+    this.tarjeta = null;
+  }
+  getUsuario() {
+    alert(
+      "MIS DATOS\nUsuario: " +
+        this.usuario +
+        "\nContraseña: " +
+        this.contrasenia
+    );
+  }
+  setTarjeta(tarjeta) {
+    this.tarjeta = tarjeta;
+  }
+}
+class Tarjeta {
+  constructor(
+    numeroTarjeta,
+    cvvTarjeta,
+    fechaDeVencimientoTarjeta,
+    nombresTitularTarjeta,
+    apellidosTitularTarjeta
+  ) {
+    this.numeroTarjeta = numeroTarjeta;
+    this.cvvTarjeta = cvvTarjeta;
+    this.fechaDeVencimientoTarjeta = fechaDeVencimientoTarjeta;
+    this.nombresTitularTarjeta = nombresTitularTarjeta;
+    this.apellidosTitularTarjeta = apellidosTitularTarjeta;
+  }
+  getTarjeta() {
+    alert(
+      "MI TARJETA\nNúmero: " +
+        this.numeroTarjeta +
+        "\nCVV: " +
+        this.cvvTarjeta +
+        "\nFecha de vencimiento: " +
+        this.fechaDeVencimientoTarjeta +
+        "\nNombres del titular: " +
+        this.nombresTitularTarjeta +
+        "\nApellidos del titular: " +
+        this.apellidosTitularTarjeta
+    );
+  }
+}
 //OBTENER NOMBRE DE LA PLATAFORMA
 function obtenerNombrePlataforma(opcionMenuPlataformas) {
   let nombrePlataforma;
@@ -42,10 +90,20 @@ function obtenerMontoAPagar(opcionMenuPlataformas, mesesAlquiler) {
 }
 
 //ALQUILAR CUENTA DE PLATAFORMA
-function alquilarCuentaPlataforma() {
+function alquilarCuentaPlataforma(indiceUsuarioIniciadoSesion) {
   let opcionMenuPlataformas;
   let montoAPagarPlataforma;
   let mesesAlquiler, nombrePlataforma;
+  let respuestaCompra;
+  let numeroTarjeta;
+  let cvvTarjeta;
+  let fechaDeVencimientoTarjeta;
+  let nombresTitularTarjeta;
+  let apellidosTitularTarjeta;
+  let nuevaTarjeta;
+  let respuestaGuardarTarjeta;
+  let nombreUsuarioPlataforma;
+  let contraseniaPlataforma;
   do {
     opcionMenuPlataformas = prompt(
       "ALQUILAR CUENTA DE STREAMING\n1. Netflix - S/. 12 x Mes\n2. Movistar Play - S/. 5 x Mes\n3. Disney + - S/. 7 x Mes\n4. Star + - S/. 7 x Mes\n5. HBO Max - S/. 8 x Mes\n6. Prime Video - S/. 7 x Mes\n7. Spotify - S/. 7 x Mes\nIngrese una opción:"
@@ -87,51 +145,146 @@ function alquilarCuentaPlataforma() {
     opcionMenuPlataformas,
     mesesAlquiler
   );
-  alert(
-    "Usted debe pagar S/. " +
-      montoAPagarPlataforma +
-      " por el aquiler de una cuenta de la Plataforma " +
-      nombrePlataforma +
-      " durante " +
-      mesesAlquiler +
-      " mes(es)."
-  );
+  do {
+    respuestaCompra = prompt(
+      "Usted debe pagar S/. " +
+        montoAPagarPlataforma +
+        " por el aquiler de una cuenta de la Plataforma " +
+        nombrePlataforma +
+        " durante " +
+        mesesAlquiler +
+        " mes(es).\nIngrese OK para continuar o CANCELAR para cancelar compra:"
+    );
+    respuestaCompra = respuestaCompra.toLocaleUpperCase();
+    if (respuestaCompra == "OK") {
+      if (usuarios[indiceUsuarioIniciadoSesion].tarjeta == null) {
+        do {
+          numeroTarjeta = prompt(
+            "INGRESAR TARJETA\nIngrese el número de la tarjeta:"
+          );
+          if (numeroTarjeta == "") {
+            alert("Número de la tarjeta vacío. Debe volver a llenarlo.");
+          }
+        } while (numeroTarjeta == "");
+        do {
+          cvvTarjeta = prompt(
+            "INGRESAR TARJETA\nNúmero: " +
+              numeroTarjeta +
+              "\nIngrese el CVV de la tarjeta:"
+          );
+          if (cvvTarjeta == "") {
+            alert("CVV vacío. Debe volver a llenarlo.");
+          }
+        } while (cvvTarjeta == "");
+        do {
+          fechaDeVencimientoTarjeta = prompt(
+            "INGRESAR TARJETA\nNúmero: " +
+              numeroTarjeta +
+              "\nCVV: " +
+              cvvTarjeta +
+              "\nIngrese la fecha de vencimiento de la tarjeta (MM/AA):"
+          );
+          if (fechaDeVencimientoTarjeta == "") {
+            alert("Fecha de vencimiento vacía. Debe volver a llenarla.");
+          }
+        } while (fechaDeVencimientoTarjeta == "");
+        do {
+          nombresTitularTarjeta = prompt(
+            "INGRESAR TARJETA\nNúmero: " +
+              numeroTarjeta +
+              "\nCVV: " +
+              cvvTarjeta +
+              "\nFecha de vencimiento: " +
+              fechaDeVencimientoTarjeta +
+              "\nIngrese los nombres del titular de la tarjeta:"
+          );
+          if (nombresTitularTarjeta == "") {
+            alert("Nombres del titular vacío. Debe volver a llenarlo.");
+          }
+        } while (nombresTitularTarjeta == "");
+        do {
+          apellidosTitularTarjeta = prompt(
+            "INGRESAR TARJETA\nNúmero: " +
+              numeroTarjeta +
+              "\nCVV: " +
+              cvvTarjeta +
+              "\nFecha de vencimiento: " +
+              fechaDeVencimientoTarjeta +
+              "\nNombres del titular: " +
+              nombresTitularTarjeta +
+              "\nIngrese los apellidos del titular de la tarjeta:"
+          );
+          if (apellidosTitularTarjeta == "") {
+            alert("Apellidos del titular vacío. Debe volver a llenarlo.");
+          }
+        } while (apellidosTitularTarjeta == "");
+        nuevaTarjeta = new Tarjeta(
+          numeroTarjeta,
+          cvvTarjeta,
+          fechaDeVencimientoTarjeta,
+          nombresTitularTarjeta,
+          apellidosTitularTarjeta
+        );
+        do {
+          respuestaGuardarTarjeta = prompt(
+            "¿Desea guardar su tarjeta para próximas compras (SI, NO)?"
+          );
+          respuestaGuardarTarjeta = respuestaGuardarTarjeta.toLocaleUpperCase();
+          if (
+            respuestaGuardarTarjeta != "SI" &&
+            respuestaGuardarTarjeta != "NO"
+          ) {
+            alert("Respuesta no válida. Vuelva a intentarlo.");
+          }
+        } while (
+          respuestaGuardarTarjeta != "SI" &&
+          respuestaGuardarTarjeta != "NO"
+        );
+        if (respuestaGuardarTarjeta == "SI") {
+          usuarios[indiceUsuarioIniciadoSesion].setTarjeta(nuevaTarjeta);
+        }
+      }
+      do {
+        nombreUsuarioPlataforma = prompt(
+          "NUEVA CUENTA EN " +
+            nombrePlataforma.toLocaleUpperCase() +
+            "\nIngrese el nombre de usuario para su cuenta en la plataforma:"
+        );
+        if (nombreUsuarioPlataforma == "") {
+          alert("Nombre de usuario vacío. Debe volver a llenarlo.");
+        }
+      } while (nombreUsuarioPlataforma == "");
+      do {
+        contraseniaPlataforma = prompt(
+          "NUEVA CUENTA EN " +
+            nombrePlataforma.toLocaleUpperCase() +
+            "\nNombre de usuario: " +
+            nombreUsuarioPlataforma +
+            "\nIngrese la contraseña para su cuenta en la plataforma:"
+        );
+        if (contraseniaPlataforma == "") {
+          alert("Contraseña vacía. Debe volver a llenarla.");
+        }
+      } while (contraseniaPlataforma == "");
+      alert("La cuenta se ha creado con éxito.");
+    } else if (respuestaCompra != "CANCELAR") {
+      alert("Respuesta no válida. Vuelva a intentarlo.");
+    }
+  } while (respuestaCompra != "OK" && respuestaCompra != "CANCELAR");
 }
 
 //MENÚ DEL USUARIO INICIADO SESIÓN
-function menuUsuario(usuarioIniciarSesion) {
+function menuUsuario(indiceUsuarioIniciadoSesion) {
   let opcionMenuUsuario = prompt(
     "BIENVENID@ " +
-      usuarioIniciarSesion +
-      "\n1. Ver mis datos.\n2. Alquilar cuenta de Streaming.\n0. Cerrar sesión.\nIngrese una opción:"
+      usuarios[indiceUsuarioIniciadoSesion].usuario +
+      "\n1. Ver mis datos.\n2. Ver datos de mi tarjeta.\n3. Alquilar cuenta de Streaming.\n0. Cerrar sesión.\nIngrese una opción:"
   );
   return opcionMenuUsuario;
 }
 
-//VALIDAR USUARIO
-function validarUsuarioIniciarSesion(
-  usuarioIniciarSesion,
-  contraseniaIniciarSesion,
-  usuarioRegistrarse,
-  contraseniaRegistrarse
-) {
-  if (
-    usuarioIniciarSesion == usuarioRegistrarse &&
-    contraseniaIniciarSesion == contraseniaRegistrarse
-  ) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-//VER MIS DATOS DE USUARIO
-function verMisDatos(usuario, contrasenia) {
-  alert("MIS DATOS\n" + "Usuario: " + usuario + "\nContraseña: " + contrasenia);
-}
-
 //INICIAR SESIÓN
-function iniciarSesion(usuarioRegistrarse, contraseniaRegistrarse) {
+function iniciarSesion() {
   let usuarioIniciarSesion, contraseniaIniciarSesion;
   let opcionMenuUsuario;
   do {
@@ -151,19 +304,31 @@ function iniciarSesion(usuarioRegistrarse, contraseniaRegistrarse) {
     }
   } while (contraseniaIniciarSesion == "");
   if (
-    validarUsuarioIniciarSesion(
-      usuarioIniciarSesion,
-      contraseniaIniciarSesion,
-      usuarioRegistrarse,
-      contraseniaRegistrarse
+    usuarios.some(
+      (usuario) =>
+        usuario.usuario === usuarioIniciarSesion &&
+        usuario.contrasenia === contraseniaIniciarSesion
     )
   ) {
+    let indiceUsuarioIniciadoSesion = usuarios.findIndex(
+      (usuario) =>
+        usuario.usuario === usuarioIniciarSesion &&
+        usuario.contrasenia === contraseniaIniciarSesion
+    );
     do {
-      opcionMenuUsuario = menuUsuario(usuarioIniciarSesion);
+      opcionMenuUsuario = menuUsuario(indiceUsuarioIniciadoSesion);
       if (opcionMenuUsuario == "1") {
-        verMisDatos(usuarioIniciarSesion, contraseniaIniciarSesion);
+        usuarios[indiceUsuarioIniciadoSesion].getUsuario();
       } else if (opcionMenuUsuario == "2") {
-        alquilarCuentaPlataforma();
+        if (usuarios[indiceUsuarioIniciadoSesion].tarjeta != null) {
+          usuarios[indiceUsuarioIniciadoSesion].tarjeta.getTarjeta();
+        } else {
+          alert(
+            "Aún no ha realizado ninguna compra, por lo que no hay información registrada de su tarjeta."
+          );
+        }
+      } else if (opcionMenuUsuario == "3") {
+        alquilarCuentaPlataforma(indiceUsuarioIniciadoSesion);
       } else if (opcionMenuUsuario != "0") {
         alert("Opción no válida. Vuelva a intentarlo.");
       }
@@ -183,7 +348,7 @@ function menuPrincipal() {
 
 //PROGRAMA PRINCIPAL
 let opcionMenu;
-let usuarioRegistrarse, contraseniaRegistrarse;
+let usuarioRegistrarse, contraseniaRegistrarse, nuevoUsuario;
 do {
   opcionMenu = menuPrincipal();
   if (opcionMenu == "1") {
@@ -203,8 +368,11 @@ do {
         alert("Contraseña vacía. Debe volver a llenarla.");
       }
     } while (contraseniaRegistrarse == "");
+    nuevoUsuario = new Usuario(usuarioRegistrarse, contraseniaRegistrarse);
+    usuarios.push(nuevoUsuario);
+    console.log(usuarios);
   } else if (opcionMenu == "2") {
-    iniciarSesion(usuarioRegistrarse, contraseniaRegistrarse);
+    iniciarSesion();
   } else if (opcionMenu != "0") {
     alert("Opción no válida. Vuelva a intentarlo.");
   }
