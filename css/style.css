@@ -2234,7 +2234,7 @@ textarea.form-control-lg {
 }
 
 .form-select {
-  --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  --bs-form-select-bg-img: url("../images/flecha-desplegable.svg");
   display: block;
   width: 100%;
   padding: 0.375rem 2.25rem 0.375rem 0.75rem;
@@ -2259,9 +2259,9 @@ textarea.form-control-lg {
   }
 }
 .form-select:focus {
-  border-color: #86b7fe;
+  border-color: white;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.25);
 }
 .form-select[multiple], .form-select[size]:not([size="1"]) {
   padding-right: 0.75rem;
@@ -3835,9 +3835,9 @@ textarea.form-control-lg {
   --bs-navbar-toggler-font-size: 1.25rem;
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
-  --bs-navbar-toggler-border-radius: 0.375rem;
-  --bs-navbar-toggler-focus-width: 0.25rem;
-  --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+  --bs-navbar-toggler-border-radius: 0;
+  --bs-navbar-toggler-focus-width: 0;
+  --bs-navbar-toggler-transition: none;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -11741,6 +11741,51 @@ header {
 }
 .icono--spotify {
   border-color: #18d860;
+}
+
+.icono--13 {
+  max-width: 13rem;
+  border-width: 0;
+  border-radius: 0;
+}
+
+.icono--10 {
+  max-width: 10rem;
+  border-color: black;
+}
+
+.card-streaming {
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.card-streaming--netflix {
+  background-color: #f84440;
+  box-shadow: -20px 30px 144px -19px rgba(248, 68, 64, 0.8);
+}
+.card-streaming--movistarPlay {
+  background-color: #009ff7;
+  box-shadow: -20px 30px 144px -19px rgba(0, 159, 247, 0.8);
+}
+.card-streaming--disneyPlus {
+  background-color: #05009d;
+  box-shadow: -20px 30px 144px -19px rgba(5, 0, 157, 0.8);
+}
+.card-streaming--starPlus {
+  background-color: #ff5400;
+  box-shadow: -20px 30px 144px -19px rgba(255, 84, 0, 0.8);
+}
+.card-streaming--hboMax {
+  background-color: #9200bb;
+  box-shadow: -20px 30px 144px -19px rgba(146, 0, 187, 0.8);
+}
+.card-streaming--primeVideo {
+  background-color: #d0009c;
+  box-shadow: -20px 30px 144px -19px rgba(208, 0, 156, 0.8);
+}
+.card-streaming--spotify {
+  background-color: #18d860;
+  box-shadow: -20px 30px 144px -19px rgba(24, 216, 96, 0.8);
 }
 
 @media (min-width: 768px) {
