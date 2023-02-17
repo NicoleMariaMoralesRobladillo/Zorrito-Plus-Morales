@@ -96,7 +96,6 @@ header {
     align-items: center;
   }
 }
-
 .button {
   font-family: "Readex Pro", sans-serif;
   &:hover,
@@ -177,6 +176,33 @@ header {
     box-shadow: -20px 30px 144px -19px #18d860cc;
   }
 }
+.formulario {
+  background-image: linear-gradient(
+    to bottom right,
+    #040c51 20%,
+    #171e5700 100%
+  );
+  max-width: 30rem;
+}
+.user-icon {
+  max-width: 10rem;
+}
+.formulario__button {
+  max-width: fit-content;
+  background-color: #182275;
+  white-space: normal;
+  &:hover,
+  &:active {
+    transform: scale(1.1);
+  }
+}
+.formulario__link {
+  color: #47c0f0;
+}
+.zorrito-avatar {
+  max-width: 30rem !important;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 90%;

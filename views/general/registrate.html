@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Iniciar sesión | Zorrito +</title>
+    <title>Regístrate | Zorrito +</title>
     <link rel="shortcut icon" href="../../images/zorrito-icon.svg" />
     <link rel="stylesheet" href="../../css/style.css" />
   </head>
@@ -93,7 +93,7 @@
         </div>
       </nav>
     </header>
-    <main class="iniciarsesion px-4">
+    <main class="registrate px-4">
       <div class="my-5 p-0 mx-md-3 mx-lg-5">
         <div class="row align-items-center justify-content-center">
           <div
@@ -113,49 +113,92 @@
                 <h1
                   class="text-white fs-1 text-center lh-base pb-3 m-0 fw-bold text-uppercase"
                 >
-                  Iniciar sesión
+                  Regístrate
                 </h1>
-                <img
-                  src="../../images/user.png"
-                  alt="Ícono de usuario"
-                  class="py-3 user-icon m-auto w-100"
+                <label
+                  for="nombresRegistrate"
+                  class="text-white fs-5 text-start lh-base py-3"
+                  >Nombres</label
+                >
+                <input
+                  type="text"
+                  id="nombresRegistrate"
+                  name="nombresRegistrate"
+                  class="formulario__input border-0 rounded-pill py-2 px-3"
+                  required
                 />
                 <label
-                  for="correoIniciarSesion"
+                  for="apellidosRegistrate"
+                  class="text-white fs-5 text-start lh-base py-3"
+                  >Apellidos</label
+                >
+                <input
+                  type="text"
+                  id="apellidosRegistrate"
+                  name="apellidosRegistrate"
+                  class="formulario__input border-0 rounded-pill py-2 px-3"
+                  required
+                />
+                <label
+                  for="correoRegistrate"
                   class="text-white fs-5 text-start lh-base py-3"
                   >Correo</label
                 >
                 <input
                   type="email"
-                  id="correoIniciarSesion"
-                  name="correoIniciarSesion"
+                  id="correoRegistrate"
+                  name="correoRegistrate"
                   class="formulario__input border-0 rounded-pill py-2 px-3"
                   required
                 />
                 <label
-                  for="contraseniaIniciarSesion"
+                  for="contraseniaRegistrate"
                   class="text-white fs-5 text-start lh-base py-3"
                   >Contraseña</label
                 >
                 <input
                   type="password"
-                  id="contraseniaIniciarSesion"
-                  name="contraseniaIniciarSesion"
+                  id="contraseniaRegistrate"
+                  name="contraseniaRegistrate"
+                  class="formulario__input border-0 rounded-pill py-2 px-3"
+                  required
+                />
+                <label
+                  for="telefonoContactoRegistrate"
+                  class="text-white fs-5 text-start lh-base py-3"
+                  >Teléfono de contacto</label
+                >
+                <input
+                  type="tel"
+                  id="telefonoContactoRegistrate"
+                  name="telefonoContactoRegistrate"
+                  class="formulario__input border-0 rounded-pill py-2 px-3"
+                  required
+                />
+                <label
+                  for="dniRegistrate"
+                  class="text-white fs-5 text-start lh-base py-3"
+                  >DNI</label
+                >
+                <input
+                  type="text"
+                  id="dniRegistrate"
+                  name="dniRegistrate"
                   class="formulario__input border-0 rounded-pill py-2 px-3"
                   required
                 />
                 <input
                   type="submit"
-                  value="Iniciar sesión"
+                  value="Regístrate"
                   class="mt-4 mb-3 formulario__button mx-auto text-white fs-5 text-center lh-base border-0 px-4 py-3 rounded-4 text-break w-100"
                 />
                 <p class="text-white fs-5 text-center lh-base pb-2 m-0">
-                  ¿No tienes una cuenta?
+                  ¿Ya tienes una cuenta?
                 </p>
                 <a
-                  href="./registrate.html"
+                  href="./iniciarSesion.html"
                   class="fs-5 text-center lh-base pb-2 formulario__link"
-                  >Regístrate</a
+                  >Iniciar sesión</a
                 >
               </form>
             </div>
