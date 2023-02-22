@@ -2,10 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;700&display=swap");
 $form-select-focus-width: 0;
 $navbar-toggler-border-radius: 0;
+$btn-close-focus-shadow: 0;
 $navbar-toggler-focus-width: 0;
 $navbar-toggler-transition: none;
 $form-select-focus-border-color: white;
 $form-select-indicator: url("../images/flecha-desplegable.svg");
+$modal-content-color: white;
+$modal-content-bg: black;
+$modal-header-border-width: 0;
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 html {
   font-size: 85%;
@@ -82,6 +86,17 @@ header {
   &--blue {
     background-color: #182275;
   }
+  &--olivedrab {
+    background-color: olivedrab;
+  }
+  &--eliminar-cart {
+    width: fit-content;
+    color: white;
+    &:hover {
+      transform: scale(1.1);
+      color: #f84440;
+    }
+  }
 }
 .icono {
   border-style: solid;
@@ -90,32 +105,32 @@ header {
   &--netflix {
     border-color: #f84440;
   }
-  &--movistarPlay {
+  &--movistar-play {
     border-color: #009ff7;
   }
-  &--disneyPlus {
+  &--disney-plus {
     border-color: #05009d;
   }
-  &--starPlus {
+  &--star-plus {
     border-color: #ff5400;
   }
-  &--hboMax {
+  &--HBO-max {
     border-color: #9200bb;
   }
-  &--primeVideo {
+  &--prime-video {
     border-color: #d0009c;
   }
   &--spotify {
     border-color: #18d860;
+  }
+  &--6 {
+    max-width: 5rem;
   }
   &--8 {
     max-width: 8rem;
   }
   &--10 {
     max-width: 10rem;
-  }
-  &--20 {
-    max-width: 20rem;
   }
   &--30 {
     max-width: 30rem;
@@ -129,23 +144,23 @@ header {
     background-color: #f84440;
     box-shadow: -20px 30px 144px -19px #f84440cc;
   }
-  &--movistarPlay {
+  &--movistar-play {
     background-color: #009ff7;
     box-shadow: -20px 30px 144px -19px #009ff7cc;
   }
-  &--disneyPlus {
+  &--disney-plus {
     background-color: #05009d;
     box-shadow: -20px 30px 144px -19px #05009dcc;
   }
-  &--starPlus {
+  &--star-plus {
     background-color: #ff5400;
     box-shadow: -20px 30px 144px -19px #ff5400cc;
   }
-  &--hboMax {
+  &--HBO-max {
     background-color: #9200bb;
     box-shadow: -20px 30px 144px -19px #9200bbcc;
   }
-  &--primeVideo {
+  &--prime-video {
     background-color: #d0009c;
     box-shadow: -20px 30px 144px -19px #d0009ccc;
   }
@@ -179,19 +194,19 @@ header {
   &--netflix {
     box-shadow: -20px 20px 30px #f8444054;
   }
-  &--movistarPlay {
+  &--movistar-play {
     box-shadow: -20px 20px 30px #009ff754;
   }
-  &--disneyPlus {
+  &--disney-plus {
     box-shadow: -20px 20px 30px #05009d54;
   }
-  &--starPlus {
+  &--star-plus {
     box-shadow: -20px 20px 30px #ff540054;
   }
-  &--hboMax {
+  &--HBO-max {
     box-shadow: -20px 20px 30px #9200bb54;
   }
-  &--primeVideo {
+  &--prime-video {
     box-shadow: -20px 20px 30px #d0009c54;
   }
   &--spotify {
@@ -201,25 +216,29 @@ header {
     &--netflix {
       color: #f84440;
     }
-    &--movistarPlay {
+    &--movistar-play {
       color: #009ff7;
     }
-    &--disneyPlus {
+    &--disney-plus {
       color: #05009d;
     }
-    &--starPlus {
+    &--star-plus {
       color: #ff5400;
     }
-    &--hboMax {
+    &--HBO-max {
       color: #9200bb;
     }
-    &--primeVideo {
+    &--prime-video {
       color: #d0009c;
     }
     &--spotify {
       color: #18d860;
     }
   }
+}
+.modal-dialog,
+.modal-content {
+  width: fit-content;
 }
 @media (max-width: 253px) {
   .streaming-card {

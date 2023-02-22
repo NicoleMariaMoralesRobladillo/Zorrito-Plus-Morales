@@ -5244,7 +5244,7 @@ textarea.form-control-lg {
   --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
   --bs-btn-close-opacity: 0.5;
   --bs-btn-close-hover-opacity: 0.75;
-  --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  --bs-btn-close-focus-shadow: 0;
   --bs-btn-close-focus-opacity: 1;
   --bs-btn-close-disabled-opacity: 0.25;
   --bs-btn-close-white-filter: invert(1) grayscale(100%) brightness(200%);
@@ -5354,8 +5354,8 @@ textarea.form-control-lg {
   --bs-modal-width: 500px;
   --bs-modal-padding: 1rem;
   --bs-modal-margin: 0.5rem;
-  --bs-modal-color: ;
-  --bs-modal-bg: var(--bs-body-bg);
+  --bs-modal-color: white;
+  --bs-modal-bg: black;
   --bs-modal-border-color: var(--bs-border-color-translucent);
   --bs-modal-border-width: var(--bs-border-width);
   --bs-modal-border-radius: var(--bs-border-radius-lg);
@@ -5365,12 +5365,12 @@ textarea.form-control-lg {
   --bs-modal-header-padding-y: 1rem;
   --bs-modal-header-padding: 1rem 1rem;
   --bs-modal-header-border-color: var(--bs-border-color);
-  --bs-modal-header-border-width: var(--bs-border-width);
+  --bs-modal-header-border-width: 0;
   --bs-modal-title-line-height: 1.5;
   --bs-modal-footer-gap: 0.5rem;
   --bs-modal-footer-bg: ;
   --bs-modal-footer-border-color: var(--bs-border-color);
-  --bs-modal-footer-border-width: var(--bs-border-width);
+  --bs-modal-footer-border-width: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -11686,6 +11686,17 @@ header {
 .button--blue {
   background-color: #182275;
 }
+.button--olivedrab {
+  background-color: olivedrab;
+}
+.button--eliminar-cart {
+  width: fit-content;
+  color: white;
+}
+.button--eliminar-cart:hover {
+  transform: scale(1.1);
+  color: #f84440;
+}
 
 .icono {
   border-style: solid;
@@ -11695,32 +11706,32 @@ header {
 .icono--netflix {
   border-color: #f84440;
 }
-.icono--movistarPlay {
+.icono--movistar-play {
   border-color: #009ff7;
 }
-.icono--disneyPlus {
+.icono--disney-plus {
   border-color: #05009d;
 }
-.icono--starPlus {
+.icono--star-plus {
   border-color: #ff5400;
 }
-.icono--hboMax {
+.icono--HBO-max {
   border-color: #9200bb;
 }
-.icono--primeVideo {
+.icono--prime-video {
   border-color: #d0009c;
 }
 .icono--spotify {
   border-color: #18d860;
+}
+.icono--6 {
+  max-width: 5rem;
 }
 .icono--8 {
   max-width: 8rem;
 }
 .icono--10 {
   max-width: 10rem;
-}
-.icono--20 {
-  max-width: 20rem;
 }
 .icono--30 {
   max-width: 30rem;
@@ -11735,23 +11746,23 @@ header {
   background-color: #f84440;
   box-shadow: -20px 30px 144px -19px rgba(248, 68, 64, 0.8);
 }
-.streaming-card--movistarPlay {
+.streaming-card--movistar-play {
   background-color: #009ff7;
   box-shadow: -20px 30px 144px -19px rgba(0, 159, 247, 0.8);
 }
-.streaming-card--disneyPlus {
+.streaming-card--disney-plus {
   background-color: #05009d;
   box-shadow: -20px 30px 144px -19px rgba(5, 0, 157, 0.8);
 }
-.streaming-card--starPlus {
+.streaming-card--star-plus {
   background-color: #ff5400;
   box-shadow: -20px 30px 144px -19px rgba(255, 84, 0, 0.8);
 }
-.streaming-card--hboMax {
+.streaming-card--HBO-max {
   background-color: #9200bb;
   box-shadow: -20px 30px 144px -19px rgba(146, 0, 187, 0.8);
 }
-.streaming-card--primeVideo {
+.streaming-card--prime-video {
   background-color: #d0009c;
   box-shadow: -20px 30px 144px -19px rgba(208, 0, 156, 0.8);
 }
@@ -11777,19 +11788,19 @@ header {
 .account-card--netflix {
   box-shadow: -20px 20px 30px rgba(248, 68, 64, 0.3294117647);
 }
-.account-card--movistarPlay {
+.account-card--movistar-play {
   box-shadow: -20px 20px 30px rgba(0, 159, 247, 0.3294117647);
 }
-.account-card--disneyPlus {
+.account-card--disney-plus {
   box-shadow: -20px 20px 30px rgba(5, 0, 157, 0.3294117647);
 }
-.account-card--starPlus {
+.account-card--star-plus {
   box-shadow: -20px 20px 30px rgba(255, 84, 0, 0.3294117647);
 }
-.account-card--hboMax {
+.account-card--HBO-max {
   box-shadow: -20px 20px 30px rgba(146, 0, 187, 0.3294117647);
 }
-.account-card--primeVideo {
+.account-card--prime-video {
   box-shadow: -20px 20px 30px rgba(208, 0, 156, 0.3294117647);
 }
 .account-card--spotify {
@@ -11798,23 +11809,28 @@ header {
 .account-card__text--netflix {
   color: #f84440;
 }
-.account-card__text--movistarPlay {
+.account-card__text--movistar-play {
   color: #009ff7;
 }
-.account-card__text--disneyPlus {
+.account-card__text--disney-plus {
   color: #05009d;
 }
-.account-card__text--starPlus {
+.account-card__text--star-plus {
   color: #ff5400;
 }
-.account-card__text--hboMax {
+.account-card__text--HBO-max {
   color: #9200bb;
 }
-.account-card__text--primeVideo {
+.account-card__text--prime-video {
   color: #d0009c;
 }
 .account-card__text--spotify {
   color: #18d860;
+}
+
+.modal-dialog,
+.modal-content {
+  width: fit-content;
 }
 
 @media (max-width: 253px) {
