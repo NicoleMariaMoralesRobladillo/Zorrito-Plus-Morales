@@ -13,17 +13,9 @@ html {
 * {
   font-family: "Poppins", sans-serif;
 }
+//NAVBAR
 header {
   background-image: linear-gradient(to bottom right, black 50%, #040c51 100%);
-}
-.logo-icon {
-  max-width: 8rem;
-}
-.nav-link {
-  font-family: "Readex Pro", sans-serif;
-}
-.nav-item {
-  text-align: center;
 }
 .navbar-toggler {
   width: 35px;
@@ -32,18 +24,9 @@ header {
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   outline: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border: 0;
   &__icon {
-    display: block;
-    position: absolute;
     height: 5px;
-    width: 100%;
-    background-color: white;
     border-radius: 50px;
-    opacity: 1;
-    left: 0;
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -51,18 +34,15 @@ header {
     -o-transition: 0.25s ease-in-out;
     transition: 0.25s ease-in-out;
     &--top-bar {
-      margin-top: 0px;
       -webkit-transform: rotate(135deg);
       -ms-transform: rotate(135deg);
       transform: rotate(135deg);
     }
     &--middle-bar {
       opacity: 0;
-      margin-top: 0px;
       filter: alpha(opacity=0);
     }
     &--bottom-bar {
-      margin-top: 0px;
       -webkit-transform: rotate(-135deg);
       -ms-transform: rotate(-135deg);
       transform: rotate(-135deg);
@@ -70,7 +50,6 @@ header {
   }
   &.collapsed {
     .navbar-toggler__icon--top-bar {
-      position: absolute;
       top: 0;
       right: 0;
       -webkit-transform: rotate(0deg);
@@ -78,7 +57,6 @@ header {
       transform: rotate(0deg);
     }
     .navbar-toggler__icon--middle-bar {
-      position: absolute;
       opacity: 1;
       filter: alpha(opacity=100);
     }
@@ -86,31 +64,28 @@ header {
       -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
       transform: rotate(0deg);
-      position: absolute;
       bottom: 0;
       right: 0;
     }
   }
-  .navbar-nav-user {
-    display: flex;
-    align-items: center;
-  }
+}
+.readex-pro {
+  font-family: "Readex Pro", sans-serif;
 }
 .button {
-  font-family: "Readex Pro", sans-serif;
+  max-width: fit-content;
+  white-space: normal;
   &:hover,
   &:active {
     transform: scale(1.1);
   }
-}
-.zorrito-avatar {
-  max-width: 30rem !important;
+  &--blue {
+    background-color: #182275;
+  }
 }
 .icono {
-  max-width: 8rem;
-  background-color: black;
-  border-width: 10px;
   border-style: solid;
+  border-width: 10px;
   border-radius: 10px;
   &--netflix {
     border-color: #f84440;
@@ -133,19 +108,22 @@ header {
   &--spotify {
     border-color: #18d860;
   }
+  &--8 {
+    max-width: 8rem;
+  }
+  &--10 {
+    max-width: 10rem;
+  }
+  &--20 {
+    max-width: 20rem;
+  }
+  &--30 {
+    max-width: 30rem;
+  }
 }
-.icono--13 {
-  max-width: 13rem;
-  border-width: 0;
-  border-radius: 0;
-}
-.icono--10 {
-  max-width: 10rem;
-  border-color: black;
-}
-.card-streaming {
+.streaming-card {
   width: fit-content;
-  padding: 1rem;
+  max-width: 18rem;
   border-radius: 10px;
   &--netflix {
     background-color: #f84440;
@@ -175,43 +153,99 @@ header {
     background-color: #18d860;
     box-shadow: -20px 30px 144px -19px #18d860cc;
   }
+  &__buttons {
+    &__months {
+      &__input {
+        max-width: 5rem;
+      }
+    }
+  }
 }
-.formulario {
+.form {
   background-image: linear-gradient(
     to bottom right,
     #040c51 20%,
     #171e5700 100%
   );
   max-width: 30rem;
-}
-.user-icon {
-  max-width: 10rem;
-}
-.formulario__button {
-  max-width: fit-content;
-  background-color: #182275;
-  white-space: normal;
-  &:hover,
-  &:active {
-    transform: scale(1.1);
+  &-select {
+    width: inherit !important;
+  }
+  &__link {
+    color: #47c0f0;
   }
 }
-.formulario__link {
-  color: #47c0f0;
+.account-card {
+  &--netflix {
+    box-shadow: -20px 20px 30px #f8444054;
+  }
+  &--movistarPlay {
+    box-shadow: -20px 20px 30px #009ff754;
+  }
+  &--disneyPlus {
+    box-shadow: -20px 20px 30px #05009d54;
+  }
+  &--starPlus {
+    box-shadow: -20px 20px 30px #ff540054;
+  }
+  &--hboMax {
+    box-shadow: -20px 20px 30px #9200bb54;
+  }
+  &--primeVideo {
+    box-shadow: -20px 20px 30px #d0009c54;
+  }
+  &--spotify {
+    box-shadow: -20px 20px 30px #18d86054;
+  }
+  &__text {
+    &--netflix {
+      color: #f84440;
+    }
+    &--movistarPlay {
+      color: #009ff7;
+    }
+    &--disneyPlus {
+      color: #05009d;
+    }
+    &--starPlus {
+      color: #ff5400;
+    }
+    &--hboMax {
+      color: #9200bb;
+    }
+    &--primeVideo {
+      color: #d0009c;
+    }
+    &--spotify {
+      color: #18d860;
+    }
+  }
 }
-.zorrito-avatar {
-  max-width: 30rem !important;
+@media (max-width: 253px) {
+  .streaming-card {
+    &__buttons {
+      &__cart {
+        margin-right: 0;
+      }
+      &__months {
+        flex-direction: column !important;
+        max-width: 5rem;
+        &__text {
+          border-radius: 1rem 1rem 0 0 !important;
+          width: 100%;
+        }
+        &__input {
+          border-radius: 0 0 1rem 1rem !important;
+          max-width: none;
+          width: 100%;
+        }
+      }
+    }
+  }
 }
-
 @media (min-width: 768px) {
   html {
     font-size: 90%;
-  }
-}
-@media (min-width: 992px) {
-  .navbar-nav-user {
-    display: flex;
-    align-items: center;
   }
 }
 @media (min-width: 1024px) {

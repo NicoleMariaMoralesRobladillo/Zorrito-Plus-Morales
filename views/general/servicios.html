@@ -18,10 +18,10 @@
             ><img
               src="../../images/zorrito-icon.svg"
               alt="Ícono de Zorrito Plus"
-              class="logo-icon"
+              class="icono--8"
           /></a>
           <button
-            class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around ms-0 me-md-3 me-lg-5 p-0 border-0 position-relative"
+            class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around ms-0 me-md-3 me-lg-5 p-0 border border-0 position-relative shadow-none"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -30,13 +30,13 @@
             aria-label="Toggle navigation"
           >
             <span
-              class="navbar-toggler__icon navbar-toggler__icon--top-bar"
+              class="navbar-toggler__icon navbar-toggler__icon--top-bar d-block position-absolute bg-white w-100 start-0 mt-0"
             ></span>
             <span
-              class="navbar-toggler__icon navbar-toggler__icon--middle-bar"
+              class="navbar-toggler__icon navbar-toggler__icon--middle-bar d-block position-absolute bg-white w-100 start-0 mt-0"
             ></span>
             <span
-              class="navbar-toggler__icon navbar-toggler__icon--bottom-bar"
+              class="navbar-toggler__icon navbar-toggler__icon--bottom-bar d-block position-absolute bg-white w-100 start-0 mt-0"
             ></span>
           </button>
           <div
@@ -44,46 +44,42 @@
             id="navbarNav"
           >
             <ul class="navbar-nav d-lg-flex align-items-center pt-4 pt-lg-0">
-              <li class="nav-item pb-2 pt-0 py-lg-0 px-0 pe-lg-4">
+              <li class="nav-item pb-2 pt-0 py-lg-0 px-0 pe-lg-4 text-center">
                 <a
                   href="../../index.html"
-                  class="nav-link active fs-5 p-0 fw-bold text-uppercase"
+                  class="nav-link active fs-5 p-0 fw-bold text-uppercase readex-pro"
                   >Inicio</a
                 >
               </li>
-              <li class="nav-item py-2 py-lg-0 px-0 px-lg-4">
+              <li class="nav-item py-2 py-lg-0 px-0 px-lg-4 text-center">
                 <a
                   href="./servicios.html"
-                  class="nav-link active fs-5 p-0 fw-bold text-uppercase"
+                  class="nav-link active fs-5 p-0 fw-bold text-uppercase readex-pro"
                   >Servicios</a
                 >
               </li>
-              <li class="nav-item pt-2 pb-0 py-lg-0 px-0 ps-lg-4">
+              <li class="nav-item pt-2 pb-0 py-lg-0 px-0 ps-lg-4 text-center">
                 <a
                   href="./iniciarSesion.html"
-                  class="nav-link active fs-5 p-0 fw-bold text-uppercase"
+                  class="nav-link active fs-5 p-0 fw-bold text-uppercase readex-pro"
                   ><button
                     class="bg-black text-white border-white rounded-4 py-2 px-3 fw-bold text-uppercase"
                   >
                     Iniciar sesión
                     <svg
-                      width="32"
-                      height="35"
-                      viewBox="0 0 32 35"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 30 33"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <rect
-                        x="9"
-                        y="1"
-                        width="22"
-                        height="33"
+                      <path
+                        d="M28.7434 32H1C4.4077 24.1099 6.60302 20.0727 16.1327 20.5C23.5899 20.4179 26.3019 23.0251 28.7434 32Z"
                         stroke="white"
-                        stroke-width="2"
                       />
                       <path
-                        d="M24.0607 19.0607C24.6464 18.4749 24.6464 17.5251 24.0607 16.9393L14.5147 7.3934C13.9289 6.80761 12.9792 6.80761 12.3934 7.3934C11.8076 7.97919 11.8076 8.92893 12.3934 9.51472L20.8787 18L12.3934 26.4853C11.8076 27.0711 11.8076 28.0208 12.3934 28.6066C12.9792 29.1924 13.9289 29.1924 14.5147 28.6066L24.0607 19.0607ZM0 19.5L23 19.5V16.5L0 16.5L0 19.5Z"
-                        fill="white"
+                        d="M23.7035 8.5C23.7035 12.9141 20.0923 16.5 15.6283 16.5C11.1643 16.5 7.55307 12.9141 7.55307 8.5C7.55307 4.08587 11.1643 0.5 15.6283 0.5C20.0923 0.5 23.7035 4.08587 23.7035 8.5Z"
+                        stroke="white"
                       />
                     </svg></button
                 ></a>
@@ -103,11 +99,9 @@
             class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center p-4"
           >
             <div
-              class="card-streaming d-flex flex-column justify-items-center align-items-center card-streaming--netflix"
+              class="streaming-card d-flex flex-column justify-items-center align-items-center streaming-card--netflix p-3"
             >
-              <div
-                class="logo-streaming p-2 m-3 icono icono--13 icono--netflix"
-              >
+              <div class="p-2 m-3 bg-black">
                 <img
                   src="../../images/netflix-logo.png"
                   alt="Logo de Netflix"
@@ -127,11 +121,9 @@
             class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center p-4"
           >
             <div
-              class="card-streaming d-flex flex-column justify-items-center align-items-center card-streaming--movistarPlay"
+              class="streaming-card d-flex flex-column justify-items-center align-items-center streaming-card--movistarPlay p-3"
             >
-              <div
-                class="logo-streaming p-2 m-3 icono icono--13 icono--movistarPlay"
-              >
+              <div class="p-2 m-3 bg-black">
                 <img
                   src="../../images/movistar-logo.png"
                   alt="Logo de Movistar Play"
@@ -151,11 +143,9 @@
             class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center p-4"
           >
             <div
-              class="card-streaming d-flex flex-column justify-items-center align-items-center card-streaming--disneyPlus"
+              class="streaming-card d-flex flex-column justify-items-center align-items-center streaming-card--disneyPlus p-3"
             >
-              <div
-                class="logo-streaming p-2 m-3 icono icono--13 icono--disneyPlus"
-              >
+              <div class="p-2 m-3 bg-black">
                 <img
                   src="../../images/disneyplus-logo.png"
                   alt="Logo de Disney Plus"
@@ -175,11 +165,9 @@
             class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center p-4"
           >
             <div
-              class="card-streaming d-flex flex-column justify-items-center align-items-center card-streaming--starPlus"
+              class="streaming-card d-flex flex-column justify-items-center align-items-center streaming-card--starPlus p-3"
             >
-              <div
-                class="logo-streaming p-2 m-3 icono icono--13 icono--starPlus"
-              >
+              <div class="p-2 m-3 bg-black">
                 <img
                   src="../../images/starplus-logo.png"
                   alt="Logo de Star Plus"
@@ -199,9 +187,9 @@
             class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center p-4"
           >
             <div
-              class="card-streaming d-flex flex-column justify-items-center align-items-center card-streaming--hboMax"
+              class="streaming-card d-flex flex-column justify-items-center align-items-center streaming-card--hboMax p-3"
             >
-              <div class="logo-streaming p-2 m-3 icono icono--13 icono--hboMax">
+              <div class="p-2 m-3 bg-black">
                 <img
                   src="../../images/hbomax-logo.png"
                   alt="Logo de HBO Max"
@@ -221,11 +209,9 @@
             class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center p-4"
           >
             <div
-              class="card-streaming d-flex flex-column justify-items-center align-items-center card-streaming--primeVideo"
+              class="streaming-card d-flex flex-column justify-items-center align-items-center streaming-card--primeVideo p-3"
             >
-              <div
-                class="logo-streaming p-2 m-3 icono icono--13 icono--primeVideo"
-              >
+              <div class="p-2 m-3 bg-black">
                 <img
                   src="../../images/primevideo-logo.png"
                   alt="Logo de Prime Video"
@@ -245,11 +231,9 @@
             class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center p-4"
           >
             <div
-              class="card-streaming d-flex flex-column justify-items-center align-items-center card-streaming--spotify"
+              class="streaming-card d-flex flex-column justify-items-center align-items-center streaming-card--spotify p-3"
             >
-              <div
-                class="logo-streaming p-2 m-3 icono icono--13 icono--spotify"
-              >
+              <div class="p-2 m-3 bg-black">
                 <img
                   src="../../images/spotify-logo.png"
                   alt="Logo de Spotify"
@@ -264,73 +248,6 @@
                 Al mes
               </p>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="my-5 p-0 mx-md-3 mx-lg-5">
-        <h2 class="text-white fs-1 text-center pb-2 lh-base text-uppercase m-0">
-          Métodos de pago
-        </h2>
-        <div class="d-flex pt-2 justify-content-center flex-wrap">
-          <div
-            class="mx-3 d-flex justify-content-center flex-column align-items-center"
-          >
-            <div class="logo-streaming p-2 m-3 icono icono--10">
-              <img
-                src="../../images/bcp-logo.svg"
-                alt="Logo de BCP"
-                class="img-fluid"
-              />
-            </div>
-            <h3 class="text-white lh-base fs-4 text-center">BCP</h3>
-            <p class="text-white lh-base fs-5 text-center m-0">
-              1234567890987645 <br />Jose Velarde
-            </p>
-          </div>
-          <div
-            class="mx-3 d-flex justify-content-center flex-column align-items-center"
-          >
-            <div class="logo-streaming p-2 m-3 icono icono--10">
-              <img
-                src="../../images/yape-logo.svg"
-                alt="Logo de Yape"
-                class="img-fluid"
-              />
-            </div>
-            <h3 class="text-white lh-base fs-4 text-center">YAPE</h3>
-            <p class="text-white lh-base fs-5 text-center m-0">
-              123456789 <br />Jose Velarde
-            </p>
-          </div>
-          <div
-            class="mx-3 d-flex justify-content-center flex-column align-items-center"
-          >
-            <div class="logo-streaming p-2 m-3 icono icono--10">
-              <img
-                src="../../images/bbva-logo.svg"
-                alt="Logo de BBVA"
-                class="img-fluid"
-              />
-            </div>
-            <h3 class="text-white lh-base fs-4 text-center">BBVA</h3>
-            <p class="text-white lh-base fs-5 text-center m-0">
-              1234567890987645 <br />Jose Velarde
-            </p>
-          </div>
-          <div
-            class="mx-3 d-flex justify-content-center flex-column align-items-center"
-          >
-            <div class="logo-streaming p-2 m-3 icono icono--10">
-              <img
-                src="../../images/plin-logo.svg"
-                alt="Logo de Plin"
-                class="img-fluid"
-              />
-            </div>
-            <h3 class="text-white lh-base fs-4 text-center">PLIN</h3>
-            <p class="text-white lh-base fs-5 text-center m-0">
-              123456789 <br />Jose Velarde
-            </p>
           </div>
         </div>
       </div>
