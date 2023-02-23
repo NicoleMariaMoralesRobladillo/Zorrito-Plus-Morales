@@ -10,6 +10,7 @@ $form-select-indicator: url("../images/flecha-desplegable.svg");
 $modal-content-color: white;
 $modal-content-bg: black;
 $modal-header-border-width: 0;
+$dropdown-divider-bg: white;
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 html {
   font-size: 85%;
@@ -131,6 +132,9 @@ header {
   }
   &--10 {
     max-width: 10rem;
+  }
+  &--15 {
+    max-width: 15rem;
   }
   &--30 {
     max-width: 30rem;
