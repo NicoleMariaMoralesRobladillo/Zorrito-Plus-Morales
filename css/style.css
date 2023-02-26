@@ -11742,7 +11742,7 @@ header {
 
 .streaming-card {
   width: fit-content;
-  max-width: 18rem;
+  max-width: 20rem;
   border-radius: 10px;
 }
 .streaming-card--netflix {
@@ -11782,7 +11782,7 @@ header {
   max-width: 30rem;
 }
 .form-select {
-  width: inherit !important;
+  max-width: 12rem;
 }
 .form__link {
   color: #47c0f0;
@@ -11834,6 +11834,13 @@ header {
 .modal-dialog,
 .modal-content {
   width: fit-content;
+}
+
+.dropdown-toggle,
+.dropdown-item,
+.dropdown-menu {
+  white-space: normal !important;
+  min-width: unset !important;
 }
 
 @media (max-width: 253px) {
