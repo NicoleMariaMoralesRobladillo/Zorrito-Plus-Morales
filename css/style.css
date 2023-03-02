@@ -11740,40 +11740,40 @@ header {
   max-width: 30rem;
 }
 
-.streaming-card {
+.streamingCard {
   width: fit-content;
   max-width: 20rem;
   border-radius: 10px;
 }
-.streaming-card--netflix {
+.streamingCard--netflix {
   background-color: #f84440;
   box-shadow: -20px 30px 144px -19px rgba(248, 68, 64, 0.8);
 }
-.streaming-card--movistar-play {
+.streamingCard--movistar-play {
   background-color: #009ff7;
   box-shadow: -20px 30px 144px -19px rgba(0, 159, 247, 0.8);
 }
-.streaming-card--disney-plus {
+.streamingCard--disney-plus {
   background-color: #05009d;
   box-shadow: -20px 30px 144px -19px rgba(5, 0, 157, 0.8);
 }
-.streaming-card--star-plus {
+.streamingCard--star-plus {
   background-color: #ff5400;
   box-shadow: -20px 30px 144px -19px rgba(255, 84, 0, 0.8);
 }
-.streaming-card--HBO-max {
+.streamingCard--HBO-max {
   background-color: #9200bb;
   box-shadow: -20px 30px 144px -19px rgba(146, 0, 187, 0.8);
 }
-.streaming-card--prime-video {
+.streamingCard--prime-video {
   background-color: #d0009c;
   box-shadow: -20px 30px 144px -19px rgba(208, 0, 156, 0.8);
 }
-.streaming-card--spotify {
+.streamingCard--spotify {
   background-color: #18d860;
   box-shadow: -20px 30px 144px -19px rgba(24, 216, 96, 0.8);
 }
-.streaming-card__buttons__months__input {
+.streamingCard__buttons__months__input {
   max-width: 5rem;
 }
 
@@ -11844,18 +11844,18 @@ header {
 }
 
 @media (max-width: 253px) {
-  .streaming-card__buttons__cart {
+  .streamingCard__buttons__cart {
     margin-right: 0;
   }
-  .streaming-card__buttons__months {
+  .streamingCard__buttons__months {
     flex-direction: column !important;
     max-width: 5rem;
   }
-  .streaming-card__buttons__months__text {
+  .streamingCard__buttons__months__text {
     border-radius: 1rem 1rem 0 0 !important;
     width: 100%;
   }
-  .streaming-card__buttons__months__input {
+  .streamingCard__buttons__months__input {
     border-radius: 0 0 1rem 1rem !important;
     max-width: none;
     width: 100%;

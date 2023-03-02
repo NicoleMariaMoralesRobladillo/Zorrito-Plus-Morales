@@ -140,7 +140,7 @@ header {
     max-width: 30rem;
   }
 }
-.streaming-card {
+.streamingCard {
   width: fit-content;
   max-width: 20rem;
   border-radius: 10px;
@@ -251,7 +251,7 @@ header {
   min-width: unset !important;
 }
 @media (max-width: 253px) {
-  .streaming-card {
+  .streamingCard {
     &__buttons {
       &__cart {
         margin-right: 0;

@@ -105,89 +105,91 @@
             class="col-12 col-md-6 mb-3 m-md-0 d-flex justify-content-center order-0 order-md-1"
           >
             <div class="form p-5 rounded-4 w-100">
-              <form class="d-flex flex-column">
+              <form id="formularioRegistrate" class="d-flex flex-column">
                 <h1
                   class="text-white fs-1 text-center lh-base pb-3 m-0 fw-bold text-uppercase text-break"
                 >
                   Regístrate
                 </h1>
                 <label
-                  for="nombres-registrate"
+                  for="inputNombresRegistrate"
                   class="text-white fs-5 text-start lh-base py-3 text-break"
                   >Nombres</label
                 >
                 <input
                   type="text"
-                  id="nombres-registrate"
-                  name="nombres-registrate"
+                  id="inputNombresRegistrate"
+                  name="inputNombresRegistrate"
                   class="formulario__input border-0 rounded-pill py-2 px-3 text-break"
                   required
                 />
                 <label
-                  for="apellidos-registrate"
+                  for="inputApellidosRegistrate"
                   class="text-white fs-5 text-start lh-base py-3 text-break"
                   >Apellidos</label
                 >
                 <input
                   type="text"
-                  id="apellidos-registrate"
-                  name="apellidos-registrate"
+                  id="inputApellidosRegistrate"
+                  name="inputApellidosRegistrate"
                   class="formulario__input border-0 rounded-pill py-2 px-3 text-break"
                   required
                 />
                 <label
-                  for="correo-registrate"
+                  for="inputCorreoRegistrate"
                   class="text-white fs-5 text-start lh-base py-3 text-break"
                   >Correo</label
                 >
                 <input
                   type="email"
-                  id="correo-registrate"
-                  name="correo-registrate"
+                  id="inputCorreoRegistrate"
+                  name="inputCorreoRegistrate"
                   class="formulario__input border-0 rounded-pill py-2 px-3 text-break"
                   required
                 />
                 <label
-                  for="contrasenia-registrate"
+                  for="inputContraseniaRegistrate"
                   class="text-white fs-5 text-start lh-base py-3 text-break"
                   >Contraseña</label
                 >
                 <input
                   type="password"
-                  id="contrasenia-registrate"
-                  name="contrasenia-registrate"
+                  id="inputContraseniaRegistrate"
+                  name="inputContraseniaRegistrate"
                   class="formulario__input border-0 rounded-pill py-2 px-3 text-break"
                   required
                 />
                 <label
-                  for="telefono-contacto-registrate"
+                  for="inputTelefonoContactoRegistrate"
                   class="text-white fs-5 text-start lh-base py-3 text-break"
                   >Teléfono de contacto</label
                 >
                 <input
                   type="tel"
-                  id="telefono-contacto-registrate"
-                  name="telefono-contacto-registrate"
+                  id="inputTelefonoContactoRegistrate"
+                  name="inputTelefonoContactoRegistrate"
                   class="formulario__input border-0 rounded-pill py-2 px-3 text-break"
                   required
                 />
                 <label
-                  for="dni-registrate"
+                  for="inputDniRegistrate"
                   class="text-white fs-5 text-start lh-base py-3 text-break"
                   >DNI</label
                 >
                 <input
                   type="text"
-                  id="dni-registrate"
-                  name="dni-registrate"
+                  id="inputDniRegistrate"
+                  name="inputDniRegistrate"
                   class="formulario__input border-0 rounded-pill py-2 px-3 text-break"
                   required
                 />
-                <input
+                <button
                   type="submit"
-                  value="Regístrate"
+                  id="botonRegistrate"
                   class="mt-4 mb-3 button button--blue mx-auto text-white fs-5 text-center lh-base border-0 px-4 py-3 rounded-4 text-break w-100"
-                />
+                >
+                  Regístrate
+                </button>
                 <p
                   class="text-white fs-5 text-center lh-base pb-2 m-0 text-break"
                 >
@@ -204,7 +206,44 @@
         </div>
       </div>
     </main>
-    <script src="../../javascript/script.js"></script>
+    <div
+      class="modal fade"
+      id="mensajeConfirmacionRegistro"
+      tabindex="-1"
+      aria-labelledby="mensajeConfirmacionRegistroLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered mx-auto p-3">
+        <div class="modal-content border border-white border-2">
+          <div class="modal-header text-center pb-0 pt-3 px-3">
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body px-3 py-0">
+            <div class="fs-5 py-2 text-break lh-base my-auto text-white px-3">
+              El registro se ha realizado correctamente.
+            </div>
+          </div>
+          <div
+            class="modal-footer d-flex justify-content-center align-items-center my-0 px-3 pb-3"
+          >
+            <button
+              type="button"
+              class="button button--blue text-white fs-5 text-center lh-base border-0 px-4 py-3 rounded-4 text-break mx-3 mb-3 mt-0"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../javascript/main-script.js"></script>
+    <script src="../../javascript/registrate-script.js"></script>
     <script
       src="https://kit.fontawesome.com/d305e9edbf.js"
       crossorigin="anonymous"
