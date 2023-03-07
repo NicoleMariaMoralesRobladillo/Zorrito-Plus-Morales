@@ -497,10 +497,10 @@
               Cerrar
             </button>
             <button
+              id="primerButtonComprar"
               type="button"
               class="button button--olivedrab text-white fs-5 text-center lh-base border-0 px-4 py-3 rounded-4 text-break mx-3 mb-3 mt-0"
-              data-bs-target="#add-credit-card-modal"
-              data-bs-toggle="modal"
+              data-bs-dismiss="modal"
             >
               Comprar
             </button>
@@ -546,6 +546,44 @@
     </div>
     <div
       class="modal fade"
+      id="mensajeCarritoVacio"
+      tabindex="-1"
+      aria-labelledby="mensajeCarritoVacioLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered mx-auto p-3">
+        <div class="modal-content border border-white border-2">
+          <div class="modal-header text-center pb-0 pt-3 px-3">
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body px-3 py-0">
+            <div class="fs-5 py-2 text-break lh-base my-auto text-white px-3">
+              El carrito está vacío.
+            </div>
+          </div>
+          <div
+            class="modal-footer d-flex justify-content-center align-items-center my-0 px-3 pb-3"
+          >
+            <button
+              type="button"
+              class="button button--blue text-white fs-5 text-center lh-base border-0 px-4 py-3 rounded-4 text-break mx-3 mb-3 mt-0"
+              data-bs-dismiss="modal"
+              data-bs-target="#cart-modal"
+              data-bs-toggle="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
       id="add-credit-card-modal"
       tabindex="-1"
       aria-labelledby="add-credit-card-modal-label"
@@ -561,75 +599,120 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body px-3 py-0">
-            <h1
-              class="modal-title text-white fs-2 text-center lh-base pb-3 mx-3 my-0 fw-bold text-uppercase text-break"
-              id="add-credit-card-modal-label"
+          <form id="formularioTarjeta">
+            <div class="modal-body px-3 py-0">
+              <h1
+                class="modal-title text-white fs-2 text-center lh-base pb-3 mx-3 my-0 fw-bold text-uppercase text-break"
+                id="add-credit-card-modal-label"
+              >
+                Ingresar tarjeta
+              </h1>
+              <div class="mx-3">
+                <label
+                  for="numero-tarjeta"
+                  class="text-white fs-5 text-start text-break lh-base pb-2"
+                  >Ingresa número de tarjeta:</label
+                >
+                <input
+                  type="text"
+                  id="numero-tarjeta"
+                  name="numero-tarjeta"
+                  class="formulario__input border-0 text-break rounded-pill py-2 px-3 mt-2 mb-4 w-100"
+                  required
+                />
+                <label
+                  for="cvv-tarjeta"
+                  class="text-white fs-5 text-start text-break lh-base pb-2"
+                  >Ingresa CVV:</label
+                >
+                <input
+                  type="text"
+                  id="cvv-tarjeta"
+                  name="cvv-tarjeta"
+                  class="formulario__input border-0 text-break rounded-pill py-2 px-3 mt-2 mb-4 w-100"
+                  required
+                />
+                <label
+                  for="fecha-vencimiento-tarjeta"
+                  class="text-white fs-5 text-start text-break lh-base pb-2"
+                  >Ingresa fecha de vencimiento:</label
+                >
+                <input
+                  type="text"
+                  id="fecha-vencimiento-tarjeta"
+                  name="fecha-vencimiento-tarjeta"
+                  class="formulario__input border-0 text-break rounded-pill py-2 px-3 mt-2 mb-4 w-100"
+                  required
+                />
+                <label
+                  for="nombres-titular-tarjeta"
+                  class="text-white fs-5 text-start text-break lh-base pb-2"
+                  >Ingresa nombres del titular:</label
+                >
+                <input
+                  type="text"
+                  id="nombres-titular-tarjeta"
+                  name="nombres-titular-tarjeta"
+                  class="formulario__input border-0 text-break rounded-pill py-2 px-3 mt-2 mb-4 w-100"
+                  required
+                />
+                <label
+                  for="apellidos-titular-tarjeta"
+                  class="text-white fs-5 text-start text-break lh-base pb-2"
+                  >Ingresa apellidos del titular:</label
+                >
+                <input
+                  type="text"
+                  id="apellidos-titular-tarjeta"
+                  name="apellidos-titular-tarjeta"
+                  class="formulario__input border-0 text-break rounded-pill py-2 px-3 mt-2 mb-4 w-100"
+                  required
+                />
+              </div>
+            </div>
+            <div
+              class="modal-footer d-flex justify-content-center align-items-center my-0 px-3 pb-3"
             >
-              Ingresar tarjeta
-            </h1>
-            <form class="mx-3">
-              <label
-                for="numero-tarjeta"
-                class="text-white fs-5 text-start text-break lh-base pb-2"
-                >Ingresa número de tarjeta:</label
+              <button
+                type="button"
+                class="button button--blue text-white fs-5 text-center lh-base border-0 px-4 py-3 rounded-4 text-break mx-3 mb-3 mt-0"
+                data-bs-dismiss="modal"
               >
-              <input
-                type="text"
-                id="numero-tarjeta"
-                name="numero-tarjeta"
-                class="formulario__input border-0 text-break rounded-pill py-2 px-3 mt-2 mb-4 w-100"
-                required
-              />
-              <label
-                for="cvv-tarjeta"
-                class="text-white fs-5 text-start text-break lh-base pb-2"
-                >Ingresa CVV:</label
+                Cerrar
+              </button>
+              <button
+                id="segundoButtonComprar"
+                type="button"
+                class="button button--olivedrab text-white fs-5 text-center lh-base border-0 px-4 py-3 rounded-4 text-break mx-3 mb-3 mt-0"
               >
-              <input
-                type="text"
-                id="cvv-tarjeta"
-                name="cvv-tarjeta"
-                class="formulario__input border-0 text-break rounded-pill py-2 px-3 mt-2 mb-4 w-100"
-                required
-              />
-              <label
-                for="fecha-vencimiento-tarjeta"
-                class="text-white fs-5 text-start text-break lh-base pb-2"
-                >Ingresa fecha de vencimiento:</label
-              >
-              <input
-                type="text"
-                id="fecha-vencimiento-tarjeta"
-                name="fecha-vencimiento-tarjeta"
-                class="formulario__input border-0 text-break rounded-pill py-2 px-3 mt-2 mb-4 w-100"
-                required
-              />
-              <label
-                for="nombres-titular-tarjeta"
-                class="text-white fs-5 text-start text-break lh-base pb-2"
-                >Ingresa nombres del titular:</label
-              >
-              <input
-                type="text"
-                id="nombres-titular-tarjeta"
-                name="nombres-titular-tarjeta"
-                class="formulario__input border-0 text-break rounded-pill py-2 px-3 mt-2 mb-4 w-100"
-                required
-              />
-              <label
-                for="apellidos-titular-tarjeta"
-                class="text-white fs-5 text-start text-break lh-base pb-2"
-                >Ingresa apellidos del titular:</label
-              >
-              <input
-                type="text"
-                id="apellidos-titular-tarjeta"
-                name="apellidos-titular-tarjeta"
-                class="formulario__input border-0 text-break rounded-pill py-2 px-3 mt-2 mb-4 w-100"
-                required
-              />
-            </form>
+                Comprar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="mensajeConfirmacionCompra"
+      tabindex="-1"
+      aria-labelledby="mensajeConfirmacionCompraLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered mx-auto p-3">
+        <div class="modal-content border border-white border-2">
+          <div class="modal-header text-center pb-0 pt-3 px-3">
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body px-3 py-0">
+            <div class="fs-5 py-2 text-break lh-base my-auto text-white px-3">
+              La compra se ha procesado correctamente.
+            </div>
           </div>
           <div
             class="modal-footer d-flex justify-content-center align-items-center my-0 px-3 pb-3"
@@ -639,19 +722,50 @@
               class="button button--blue text-white fs-5 text-center lh-base border-0 px-4 py-3 rounded-4 text-break mx-3 mb-3 mt-0"
               data-bs-dismiss="modal"
             >
-              Comprar
+              Cerrar
             </button>
           </div>
         </div>
       </div>
     </div>
-    <script src="../../javascript/main-script.js"></script>
-    <script src="../../javascript/carrito-script.js"></script>
-    <script src="../../javascript/plataformas-script.js"></script>
-    <script
-      src="https://kit.fontawesome.com/d305e9edbf.js"
-      crossorigin="anonymous"
-    ></script>
+    <div
+      class="modal fade"
+      id="mensajeFormularioTarjetaIncompleto"
+      tabindex="-1"
+      aria-labelledby="mensajeFormularioTarjetaIncompletoLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered mx-auto p-3">
+        <div class="modal-content border border-white border-2">
+          <div class="modal-header text-center pb-0 pt-3 px-3">
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body px-3 py-0">
+            <div class="fs-5 py-2 text-break lh-base my-auto text-white px-3">
+              El formulario de la tarjeta está incompleto.
+            </div>
+          </div>
+          <div
+            class="modal-footer d-flex justify-content-center align-items-center my-0 px-3 pb-3"
+          >
+            <button
+              type="button"
+              class="button button--blue text-white fs-5 text-center lh-base border-0 px-4 py-3 rounded-4 text-break mx-3 mb-3 mt-0"
+              data-bs-dismiss="modal"
+              data-bs-target="#add-credit-card-modal"
+              data-bs-toggle="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -660,6 +774,13 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
       integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../../javascript/main-script.js"></script>
+    <script src="../../javascript/carrito-script.js"></script>
+    <script src="../../javascript/plataformas-script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d305e9edbf.js"
       crossorigin="anonymous"
     ></script>
   </body>

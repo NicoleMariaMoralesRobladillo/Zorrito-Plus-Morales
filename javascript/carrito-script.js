@@ -1,3 +1,6 @@
+const addCreditCardModal = new bootstrap.Modal(
+  document.getElementById("add-credit-card-modal")
+);
 class ItemCarrito {
   constructor(plataforma, tiempoDuracion) {
     this.id = localStorage.getItem("proximoIdItemCarrito");
@@ -30,6 +33,38 @@ class ItemCarrito {
     }
     this.tiempoDuracion = tiempoDuracion;
     this.total = tiempoDuracion * this.precio;
+  }
+}
+class Tarjeta {
+  constructor(
+    numeroTarjeta,
+    cvvTarjeta,
+    fechaDeVencimientoTarjeta,
+    nombresTitularTarjeta,
+    apellidosTitularTarjeta
+  ) {
+    this.numeroTarjeta = numeroTarjeta;
+    this.cvvTarjeta = cvvTarjeta;
+    this.fechaDeVencimientoTarjeta = fechaDeVencimientoTarjeta;
+    this.nombresTitularTarjeta = nombresTitularTarjeta;
+    this.apellidosTitularTarjeta = apellidosTitularTarjeta;
+  }
+}
+class Cuenta {
+  constructor(
+    plataforma,
+    correo,
+    contrasenia,
+    fechaInicio,
+    tiempoDuracion,
+    dni
+  ) {
+    this.plataforma = plataforma;
+    this.correo = correo;
+    this.contrasenia = contrasenia;
+    this.fechaInicio = fechaInicio;
+    this.tiempoDuracion = tiempoDuracion;
+    this.dni = dni;
   }
 }
 function regularizarDatosLocalStorage() {
@@ -151,4 +186,101 @@ function actualizarTotalItemsCarrito() {
   let totalItemsCarrito = sumaTotalItemsCarrito(itemsCarritoAlmacenados);
   let totalItemsCarritoTag = document.getElementById("totalItemsCarrito");
   totalItemsCarritoTag.innerText = `Total = S/. ${totalItemsCarrito}`;
+}
+let primerButtonComprar = document.getElementById("primerButtonComprar");
+primerButtonComprar.addEventListener("click", function () {
+  let itemsCarritoAlmacenadosJSON = localStorage.getItem("itemsCarrito");
+  let itemsCarritoAlmacenados = JSON.parse(itemsCarritoAlmacenadosJSON);
+  if (
+    itemsCarritoAlmacenados == null ||
+    sumaTotalItemsCarrito(itemsCarritoAlmacenados) == 0
+  ) {
+    mostrarModal("mensajeCarritoVacio");
+  } else {
+    addCreditCardModal.show();
+  }
+});
+let segundoButtonComprar = document.getElementById("segundoButtonComprar");
+segundoButtonComprar.addEventListener("click", function (e) {
+  e.preventDefault();
+  let numeroTarjeta = document.getElementById("numero-tarjeta");
+  let cvvTarjeta = document.getElementById("cvv-tarjeta");
+  let fechaDeVencimientoTarjeta = document.getElementById(
+    "fecha-vencimiento-tarjeta"
+  );
+  let nombresTitularTarjeta = document.getElementById(
+    "nombres-titular-tarjeta"
+  );
+  let apellidosTitularTarjeta = document.getElementById(
+    "apellidos-titular-tarjeta"
+  );
+  if (
+    numeroTarjeta.value != "" &&
+    cvvTarjeta.value != "" &&
+    fechaDeVencimientoTarjeta.value != "" &&
+    nombresTitularTarjeta.value != "" &&
+    apellidosTitularTarjeta.value != ""
+  ) {
+    let nuevaTarjeta = new Tarjeta(
+      numeroTarjeta.value,
+      cvvTarjeta.value,
+      fechaDeVencimientoTarjeta.value,
+      nombresTitularTarjeta.value,
+      apellidosTitularTarjeta.value
+    );
+    let indiceUsuario = localStorage.getItem("indiceUsuarioIniciadoSesion");
+    ejecutarCompra(indiceUsuario, nuevaTarjeta);
+  } else {
+    addCreditCardModal.hide();
+    mostrarModal("mensajeFormularioTarjetaIncompleto");
+  }
+});
+function agregarTarjeta(indiceUsuario, nuevaTarjeta) {
+  let usuarios = getArregloLocalStorage("usuarios");
+  usuarios[indiceUsuario].tarjeta = nuevaTarjeta;
+  setArregloLocalStorage("usuarios", usuarios);
+}
+function ejecutarCompra(indiceUsuario, nuevaTarjeta) {
+  agregarTarjeta(indiceUsuario, nuevaTarjeta);
+  resetearFormularioTarjeta();
+  addCreditCardModal.hide();
+  let itemsCarrito = getArregloLocalStorage("itemsCarrito");
+  let usuarios = getArregloLocalStorage("usuarios");
+  let nuevaCuenta;
+  for (let itemCarrito of itemsCarrito) {
+    nuevaCuenta = new Cuenta(
+      itemCarrito.plataforma,
+      usuarios[indiceUsuario].correo,
+      usuarios[indiceUsuario].contrasenia,
+      new Date().toLocaleDateString(),
+      itemCarrito.tiempoDuracion,
+      usuarios[indiceUsuario].dni
+    );
+    addArregloLocalStorage("cuentas", nuevaCuenta);
+  }
+  mostrarModal("mensajeConfirmacionCompra");
+  localStorage.setItem("itemsCarrito", "[]");
+  let itemsCarritoContenedor = document.getElementById(
+    "itemsCarritoContenedor"
+  );
+  itemsCarritoContenedor.innerText = "";
+  actualizarTotalItemsCarrito();
+}
+function resetearFormularioTarjeta() {
+  let numeroTarjeta = document.getElementById("numero-tarjeta");
+  let cvvTarjeta = document.getElementById("cvv-tarjeta");
+  let fechaDeVencimientoTarjeta = document.getElementById(
+    "fecha-vencimiento-tarjeta"
+  );
+  let nombresTitularTarjeta = document.getElementById(
+    "nombres-titular-tarjeta"
+  );
+  let apellidosTitularTarjeta = document.getElementById(
+    "apellidos-titular-tarjeta"
+  );
+  numeroTarjeta.value = "";
+  cvvTarjeta.value = "";
+  fechaDeVencimientoTarjeta.value = "";
+  nombresTitularTarjeta.value = "";
+  apellidosTitularTarjeta.value = "";
 }

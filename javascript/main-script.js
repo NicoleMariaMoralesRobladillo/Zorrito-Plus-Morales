@@ -15,16 +15,26 @@ class Usuario {
     this.tarjeta = tarjeta;
   }
 }
-function getUsuarios() {
-  let usuariosJSON = localStorage.getItem("usuarios");
-  let usuarios = JSON.parse(usuariosJSON);
-  return usuarios;
+function getArregloLocalStorage(nombreArreglo) {
+  let arregloJSON = localStorage.getItem(nombreArreglo);
+  let arreglo = JSON.parse(arregloJSON);
+  return arreglo;
+}
+function setArregloLocalStorage(nombreArreglo, nuevoArreglo) {
+  let arregloJSON = JSON.stringify(nuevoArreglo);
+  localStorage.setItem(nombreArreglo, arregloJSON);
+}
+function addArregloLocalStorage(nombreArreglo, adicionArreglo) {
+  let arreglo = getArregloLocalStorage(nombreArreglo);
+  if (arreglo == null) {
+    arreglo = [];
+  }
+  arreglo.push(adicionArreglo);
+  setArregloLocalStorage(nombreArreglo, arreglo);
 }
 function obtenerIndiceUsuario(correoIniciarSesion, contraseniaIniciarSesion) {
-  console.log(correoIniciarSesion);
-  console.log(contraseniaIniciarSesion);
-  if (getUsuarios() != null) {
-    return getUsuarios().findIndex(
+  if (getArregloLocalStorage("usuarios") != null) {
+    return getArregloLocalStorage("usuarios").findIndex(
       (usuario) =>
         usuario.correo == correoIniciarSesion &&
         usuario.contrasenia == contraseniaIniciarSesion
@@ -34,6 +44,6 @@ function obtenerIndiceUsuario(correoIniciarSesion, contraseniaIniciarSesion) {
   }
 }
 function mostrarModal(idModal) {
-  const myModal = new bootstrap.Modal(document.getElementById(idModal));
+  let myModal = new bootstrap.Modal(document.getElementById(idModal));
   myModal.show();
 }
