@@ -173,7 +173,7 @@
             >
               <div class="p-2 m-3 bg-black">
                 <img
-                  src="../../images/movistar-logo.png"
+                  src="../../images/movistar-play-logo.png"
                   alt="Logo de Movistar Play"
                   class="img-fluid"
                 />
@@ -221,7 +221,7 @@
             >
               <div class="p-2 m-3 bg-black">
                 <img
-                  src="../../images/disneyplus-logo.png"
+                  src="../../images/disney-plus-logo.png"
                   alt="Logo de Disney Plus"
                   class="img-fluid"
                 />
@@ -269,7 +269,7 @@
             >
               <div class="p-2 m-3 bg-black">
                 <img
-                  src="../../images/starplus-logo.png"
+                  src="../../images/star-plus-logo.png"
                   alt="Logo de Star Plus"
                   class="img-fluid"
                 />
@@ -317,7 +317,7 @@
             >
               <div class="p-2 m-3 bg-black">
                 <img
-                  src="../../images/hbomax-logo.png"
+                  src="../../images/HBO-max-logo.png"
                   alt="Logo de HBO Max"
                   class="img-fluid"
                 />
@@ -365,7 +365,7 @@
             >
               <div class="p-2 m-3 bg-black">
                 <img
-                  src="../../images/primevideo-logo.png"
+                  src="../../images/prime-video-logo.png"
                   alt="Logo de Prime Video"
                   class="img-fluid"
                 />
@@ -478,64 +478,12 @@
             >
               Mi carrito
             </h1>
+            <div id="itemsCarritoContenedor"></div>
             <div
-              class="d-flex flex-row flex-wrap align-items-center justify-content-center position-relative"
-            >
-              <div class="m-3">
-                <div class="p-2 icono--6 bg-black icono icono--netflix">
-                  <img
-                    src="../../images/netflix-logo.png"
-                    alt="Logo de Netflix"
-                    class="img-fluid"
-                  />
-                </div>
-              </div>
-              <div class="m-3 text-center">
-                <div class="text-white fs-5 pb-1 text-break lh-base my-auto">
-                  Netflix
-                </div>
-                <div class="text-white fs-5 py-1 text-break lh-base my-auto">
-                  S/. 12 x 5 meses = S/. 60
-                </div>
-              </div>
-              <button
-                type="button"
-                class="position-absolute end-0 top-0 button--eliminar-cart p-2 bg-transparent border-0"
-              >
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </div>
-            <div
-              class="d-flex flex-row flex-wrap align-items-center justify-content-center position-relative"
-            >
-              <div class="m-3">
-                <div class="p-2 icono--6 bg-black icono icono--netflix">
-                  <img
-                    src="../../images/netflix-logo.png"
-                    alt="Logo de Netflix"
-                    class="img-fluid"
-                  />
-                </div>
-              </div>
-              <div class="m-3 text-center">
-                <div class="text-white fs-5 pb-1 text-break lh-base my-auto">
-                  Netflix
-                </div>
-                <div class="text-white fs-5 py-1 text-break lh-base my-auto">
-                  S/. 12 x 5 meses = S/. 60
-                </div>
-              </div>
-              <button
-                type="button"
-                class="position-absolute end-0 top-0 button--eliminar-cart p-2 bg-transparent border-0"
-              >
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </div>
-            <div
+              id="totalItemsCarrito"
               class="text-white fs-5 pt-0 text-break lh-base text-center fw-semibold m-3 pb-1"
             >
-              Total = S/. 120
+              Total = S/. 0
             </div>
           </div>
           <div
@@ -555,6 +503,42 @@
               data-bs-toggle="modal"
             >
               Comprar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="mensajeConfirmacionAddCart"
+      tabindex="-1"
+      aria-labelledby="mensajeConfirmacionAddCartLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered mx-auto p-3">
+        <div class="modal-content border border-white border-2">
+          <div class="modal-header text-center pb-0 pt-3 px-3">
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body px-3 py-0">
+            <div class="fs-5 py-2 text-break lh-base my-auto text-white px-3">
+              El ítem se ha añadido correctamente al carrito.
+            </div>
+          </div>
+          <div
+            class="modal-footer d-flex justify-content-center align-items-center my-0 px-3 pb-3"
+          >
+            <button
+              type="button"
+              class="button button--blue text-white fs-5 text-center lh-base border-0 px-4 py-3 rounded-4 text-break mx-3 mb-3 mt-0"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
             </button>
           </div>
         </div>
@@ -662,6 +646,7 @@
       </div>
     </div>
     <script src="../../javascript/main-script.js"></script>
+    <script src="../../javascript/plataformas-script.js"></script>
     <script
       src="https://kit.fontawesome.com/d305e9edbf.js"
       crossorigin="anonymous"

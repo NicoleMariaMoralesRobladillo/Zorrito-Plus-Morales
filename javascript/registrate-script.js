@@ -1,12 +1,6 @@
 let formularioRegistrate = document.getElementById("formularioRegistrate");
 formularioRegistrate.addEventListener("submit", function (e) {
   e.preventDefault();
-  agregarUsuario();
-  resetearRegistrate();
-  mostrarModal("mensajeConfirmacionRegistro");
-});
-function agregarUsuario() {
-  let usuarios = [];
   let inputNombresRegistrate = document.getElementById(
     "inputNombresRegistrate"
   );
@@ -29,6 +23,12 @@ function agregarUsuario() {
     inputTelefonoContactoRegistrate.value,
     inputDniRegistrate.value
   );
+  agregarUsuario(nuevoUsuario);
+  resetearRegistrate();
+  mostrarModal("mensajeConfirmacionRegistro");
+});
+function agregarUsuario(nuevoUsuario) {
+  let usuarios = [];
   let usuariosAlmacenadosJSON = localStorage.getItem("usuarios");
   if (usuariosAlmacenadosJSON != null) {
     usuarios = JSON.parse(usuariosAlmacenadosJSON);
