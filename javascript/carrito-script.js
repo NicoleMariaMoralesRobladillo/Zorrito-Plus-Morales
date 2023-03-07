@@ -259,6 +259,7 @@ function ejecutarCompra(indiceUsuario, nuevaTarjeta) {
     addArregloLocalStorage("cuentas", nuevaCuenta);
   }
   mostrarModal("mensajeConfirmacionCompra");
+  actualizarMisCuentas();
   localStorage.setItem("itemsCarrito", "[]");
   let itemsCarritoContenedor = document.getElementById(
     "itemsCarritoContenedor"
@@ -284,3 +285,9 @@ function resetearFormularioTarjeta() {
   nombresTitularTarjeta.value = "";
   apellidosTitularTarjeta.value = "";
 }
+let cerrarSesionButton = document.getElementById("cerrarSesionButton");
+cerrarSesionButton.addEventListener("click", function () {
+  localStorage.removeItem("indiceUsuarioIniciadoSesion");
+  localStorage.removeItem("itemsCarrito");
+  localStorage.setItem("proximoIdItemCarrito", "0");
+});

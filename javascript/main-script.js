@@ -43,6 +43,15 @@ function obtenerIndiceUsuario(correoIniciarSesion, contraseniaIniciarSesion) {
     return -1;
   }
 }
+function obtenerIndiceUsuarioConDni(dniUsuario) {
+  if (getArregloLocalStorage("usuarios") != null) {
+    return getArregloLocalStorage("usuarios").findIndex(
+      (usuario) => usuario.dni == dniUsuario
+    );
+  } else {
+    return -1;
+  }
+}
 function mostrarModal(idModal) {
   let myModal = new bootstrap.Modal(document.getElementById(idModal));
   myModal.show();

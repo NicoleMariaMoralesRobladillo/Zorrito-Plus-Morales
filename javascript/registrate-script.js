@@ -23,9 +23,20 @@ formularioRegistrate.addEventListener("submit", function (e) {
     inputTelefonoContactoRegistrate.value,
     inputDniRegistrate.value
   );
-  agregarUsuario(nuevoUsuario);
-  resetearRegistrate();
-  mostrarModal("mensajeConfirmacionRegistro");
+  if (
+    obtenerIndiceUsuario(
+      inputCorreoRegistrate.value,
+      inputContraseniaRegistrate.value
+    ) != -1
+  ) {
+    mostrarModal("mensajeErrorRegistroCorreoContrasenia");
+  } else if (obtenerIndiceUsuarioConDni(inputDniRegistrate.value) != -1) {
+    mostrarModal("mensajeErrorRegistroDni");
+  } else {
+    agregarUsuario(nuevoUsuario);
+    resetearRegistrate();
+    mostrarModal("mensajeConfirmacionRegistro");
+  }
 });
 function agregarUsuario(nuevoUsuario) {
   let usuarios = [];

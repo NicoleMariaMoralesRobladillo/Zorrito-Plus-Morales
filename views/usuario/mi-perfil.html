@@ -81,6 +81,7 @@
                   <li><hr class="dropdown-divider" /></li>
                   <li>
                     <a
+                      id="cerrarSesionButton"
                       class="dropdown-item fs-5 text-white text-break"
                       href="../../index.html"
                       ><i class="fa-solid fa-right-from-bracket pe-2"></i>Cerrar
@@ -140,10 +141,9 @@
                     Nombres:
                   </div>
                   <div
+                    id="nombresMiPerfil"
                     class="col-12 col-md-6 text-white fs-5 py-2 text-break lh-base my-auto"
-                  >
-                    Nicole Maria
-                  </div>
+                  ></div>
                 </div>
                 <div class="row">
                   <div
@@ -153,9 +153,8 @@
                   </div>
                   <div
                     class="col-12 col-md-6 text-white fs-5 py-2 text-break lh-base my-auto"
-                  >
-                    Morales Robladillo
-                  </div>
+                    id="apellidosMiPerfil"
+                  ></div>
                 </div>
                 <div class="row">
                   <div
@@ -165,9 +164,8 @@
                   </div>
                   <div
                     class="col-12 col-md-6 text-white fs-5 py-2 text-break lh-base my-auto"
-                  >
-                    moralesrobladillon@gmail.com
-                  </div>
+                    id="correoMiPerfil"
+                  ></div>
                 </div>
                 <div class="row">
                   <div
@@ -177,9 +175,8 @@
                   </div>
                   <div
                     class="col-12 col-md-6 text-white fs-5 py-2 text-break lh-base my-auto"
-                  >
-                    123
-                  </div>
+                    id="contraseniaMiPerfil"
+                  ></div>
                 </div>
                 <div class="row">
                   <div
@@ -189,9 +186,8 @@
                   </div>
                   <div
                     class="col-12 col-md-6 text-white fs-5 py-2 text-break lh-base my-auto"
-                  >
-                    +51991609732
-                  </div>
+                    id="telefonoContactoMiPerfil"
+                  ></div>
                 </div>
                 <div class="row">
                   <div
@@ -201,28 +197,8 @@
                   </div>
                   <div
                     class="col-12 col-md-6 text-white fs-5 py-2 text-break lh-base my-auto"
-                  >
-                    76543210
-                  </div>
-                </div>
-                <div class="row">
-                  <div
-                    class="col-12 col-md-6 fs-5 py-2 text-break fw-semibold lh-base my-auto text-white"
-                  >
-                    Mi tarjeta:
-                  </div>
-                  <div
-                    class="col-12 col-md-6 text-white fs-5 py-2 text-break lh-base my-auto"
-                  >
-                    <button
-                      type="button"
-                      class="button button--blue text-white fs-5 text-center lh-base border-0 px-4 py-3 rounded-4 text-break w-100 mt-2"
-                      data-bs-toggle="modal"
-                      data-bs-target="#verify-credit-card-modal"
-                    >
-                      Ver mi tarjeta
-                    </button>
-                  </div>
+                    id="dniMiPerfil"
+                  ></div>
                 </div>
               </div>
             </div>
@@ -542,202 +518,6 @@
         </div>
       </div>
     </div>
-    <div
-      class="modal fade"
-      id="verify-credit-card-modal"
-      tabindex="-1"
-      aria-labelledby="verify-credit-card-modal-label"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered mx-auto p-3">
-        <div class="modal-content border border-white border-2">
-          <div class="modal-header text-center pb-0 pt-3 px-3">
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body px-3 py-0">
-            <h1
-              class="modal-title text-white fs-2 text-center lh-base pb-3 mx-3 my-0 fw-bold text-uppercase text-break"
-              id="verify-credit-card-modal-label"
-            >
-              Autenticación del perfil
-            </h1>
-            <form class="mx-3">
-              <label
-                for="contrasenia-autenticacion"
-                class="text-white fs-5 text-start text-break lh-base pb-2"
-                >Ingresa tu contraseña:</label
-              >
-              <input
-                type="password"
-                id="contrasenia-autenticacion"
-                name="contrasenia-autenticacion"
-                class="formulario__input border-0 text-break rounded-pill py-2 px-3 mt-2 mb-4 w-100"
-                required
-              />
-            </form>
-          </div>
-          <div
-            class="modal-footer d-flex justify-content-center align-items-center my-0 px-3 pb-3"
-          >
-            <button
-              type="button"
-              class="button button--blue text-white fs-5 text-center lh-base border-0 px-4 py-3 rounded-4 text-break mx-3 mb-3 mt-0"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
-            <button
-              type="button"
-              class="button button--olivedrab text-white fs-5 text-center lh-base border-0 px-4 py-3 rounded-4 text-break mx-3 mb-3 mt-0"
-              data-bs-target="#credit-card-modal"
-              data-bs-toggle="modal"
-            >
-              Autenticar
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="modal fade"
-      id="credit-card-modal"
-      tabindex="-1"
-      aria-labelledby="credit-card-modal-label"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered mx-auto p-3">
-        <div class="modal-content border border-white border-2">
-          <div class="modal-header text-center pb-0 pt-3 px-3">
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body px-3 py-0">
-            <h1
-              class="modal-title text-white fs-2 text-center lh-base pb-3 mx-3 my-0 fw-bold text-uppercase text-break"
-              id="credit-card-modal-label"
-            >
-              Mi tarjeta
-            </h1>
-            <div class="row px-3">
-              <div
-                class="col-12 col-md-5 fs-5 py-2 text-break fw-semibold lh-base my-auto text-white"
-              >
-                Número de tarjeta:
-              </div>
-              <div
-                class="col-12 col-md-7 text-white fs-5 py-2 text-break lh-base my-auto"
-              >
-                12345678912456
-              </div>
-            </div>
-            <div class="row px-3">
-              <div
-                class="col-12 col-md-5 fs-5 py-2 text-break fw-semibold lh-base my-auto text-white"
-              >
-                CVV:
-              </div>
-              <div
-                class="col-12 col-md-7 text-white fs-5 py-2 text-break lh-base my-auto"
-              >
-                123
-              </div>
-            </div>
-            <div class="row px-3">
-              <div
-                class="col-12 col-md-5 fs-5 py-2 text-break fw-semibold lh-base my-auto text-white"
-              >
-                Fecha de vencimiento:
-              </div>
-              <div
-                class="col-12 col-md-7 text-white fs-5 py-2 text-break lh-base my-auto"
-              >
-                02/23
-              </div>
-            </div>
-            <div class="row px-3">
-              <div
-                class="col-12 col-md-5 fs-5 py-2 text-break fw-semibold lh-base my-auto text-white"
-              >
-                Nombres del titular:
-              </div>
-              <div
-                class="col-12 col-md-7 text-white fs-5 py-2 text-break lh-base my-auto"
-              >
-                Nicole Maria
-              </div>
-            </div>
-            <div class="row px-3">
-              <div
-                class="col-12 col-md-5 fs-5 py-2 text-break fw-semibold lh-base my-auto text-white"
-              >
-                Apellidos del titular:
-              </div>
-              <div
-                class="col-12 col-md-7 text-white fs-5 py-2 text-break lh-base my-auto"
-              >
-                Morales Robladillo
-              </div>
-            </div>
-          </div>
-          <div
-            class="modal-footer d-flex justify-content-center align-items-center my-0 px-3 pb-3"
-          >
-            <button
-              type="button"
-              class="button button--blue text-white fs-5 text-center lh-base border-0 px-4 py-3 rounded-4 text-break mx-3 mb-3 mt-0"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--     <div
-      class="modal fade"
-      id="mensaje-error"
-      tabindex="-1"
-      aria-labelledby="mensaje-error-label"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered mx-auto p-3">
-        <div class="modal-content border border-white border-2">
-          <div class="modal-header text-center pb-0 pt-3 px-3">
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body px-3 py-0">
-            <div class="fs-5 py-2 text-break lh-base my-auto text-white px-3">
-              ERROR. Contraseña incorrecta.
-            </div>
-          </div>
-          <div
-            class="modal-footer d-flex justify-content-center align-items-center my-0 px-3 pb-3"
-          >
-            <button
-              type="button"
-              class="button button--blue text-white fs-5 text-center lh-base border-0 px-4 py-3 rounded-4 text-break mx-3 mb-3 mt-0"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <script
       src="https://kit.fontawesome.com/d305e9edbf.js"
       crossorigin="anonymous"
@@ -754,5 +534,6 @@
     ></script>
     <script src="../../javascript/main-script.js"></script>
     <script src="../../javascript/carrito-script.js"></script>
+    <script src="../../javascript/mi-informacion-script.js"></script>
   </body>
 </html>
