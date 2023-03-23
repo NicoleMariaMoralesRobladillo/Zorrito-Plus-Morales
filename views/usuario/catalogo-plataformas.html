@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catálogo de plataformas | Zorrito +</title>
     <link rel="shortcut icon" href="../../images/zorrito-icon.svg" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <link rel="stylesheet" href="../../css/style.css" />
   </head>
   <body class="bg-black">
@@ -511,42 +516,6 @@
     </div>
     <div
       class="modal fade"
-      id="mensajeConfirmacionAddCart"
-      tabindex="-1"
-      aria-labelledby="mensajeConfirmacionAddCartLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered mx-auto p-3">
-        <div class="modal-content border border-white border-2">
-          <div class="modal-header text-center pb-0 pt-3 px-3">
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body px-3 py-0">
-            <div class="fs-5 py-2 text-break lh-base my-auto text-white px-3">
-              El ítem se ha añadido correctamente al carrito.
-            </div>
-          </div>
-          <div
-            class="modal-footer d-flex justify-content-center align-items-center my-0 px-3 pb-3"
-          >
-            <button
-              type="button"
-              class="button button--blue text-white fs-5 text-center lh-base border-0 px-4 py-3 rounded-4 text-break mx-3 mb-3 mt-0"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="modal fade"
       id="mensajeCarritoVacio"
       tabindex="-1"
       aria-labelledby="mensajeCarritoVacioLabel"
@@ -776,6 +745,10 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
       integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
       crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
     <script src="../../javascript/main-script.js"></script>
     <script src="../../javascript/carrito-script.js"></script>

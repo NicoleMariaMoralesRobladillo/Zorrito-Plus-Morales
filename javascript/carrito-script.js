@@ -68,7 +68,6 @@ class Cuenta {
   }
 }
 function regularizarDatosLocalStorage() {
-  let proximoIdItemCarrito = localStorage.getItem("proximoIdItemCarrito");
   let proximoIdItemCarritoValor;
   let itemsCarritoAlmacenadosJSON = localStorage.getItem("itemsCarrito");
   let itemsCarritoAlmacenados = JSON.parse(itemsCarritoAlmacenadosJSON);
@@ -259,7 +258,6 @@ function ejecutarCompra(indiceUsuario, nuevaTarjeta) {
     addArregloLocalStorage("cuentas", nuevaCuenta);
   }
   mostrarModal("mensajeConfirmacionCompra");
-  actualizarMisCuentas();
   localStorage.setItem("itemsCarrito", "[]");
   let itemsCarritoContenedor = document.getElementById(
     "itemsCarritoContenedor"

@@ -37,6 +37,16 @@ Array.from(streamingCard__buttons__cart).forEach(function (element) {
     agregarItemCarrito(nuevoItemCarrito);
     insertarDivItemCarrito(nuevoItemCarrito);
     actualizarTotalItemsCarrito();
-    mostrarModal("mensajeConfirmacionAddCart");
+    Toastify({
+      text: "El ítem se ha añadido correctamente al carrito.",
+      close: false,
+      duration: 3000,
+      gravity: "top",
+      position: "right",
+      style: {
+        background: "white",
+        color: "black",
+      },
+    }).showToast();
   });
 });
