@@ -2,37 +2,17 @@ const addCreditCardModal = new bootstrap.Modal(
   document.getElementById("add-credit-card-modal")
 );
 class ItemCarrito {
-  constructor(plataforma, tiempoDuracion) {
+  constructor(plataforma, tiempoDuracion, precio, nombreImagenPlataforma) {
     this.id = localStorage.getItem("proximoIdItemCarrito");
     localStorage.setItem(
       "proximoIdItemCarrito",
       (parseInt(this.id, "10") + 1).toString()
     );
     this.plataforma = plataforma;
-    if (plataforma == "Netflix") {
-      this.precio = 12;
-      this.nombreImagenPlataforma = "netflix";
-    } else if (plataforma == "Movistar Play") {
-      this.precio = 5;
-      this.nombreImagenPlataforma = "movistar-play";
-    } else if (plataforma == "Disney Plus") {
-      this.precio = 7;
-      this.nombreImagenPlataforma = "disney-plus";
-    } else if (plataforma == "Star Plus") {
-      this.precio = 7;
-      this.nombreImagenPlataforma = "star-plus";
-    } else if (plataforma == "HBO Max") {
-      this.precio = 8;
-      this.nombreImagenPlataforma = "hbo-max";
-    } else if (plataforma == "Prime Video") {
-      this.precio = 7;
-      this.nombreImagenPlataforma = "prime-video";
-    } else if (plataforma == "Spotify") {
-      this.precio = 7;
-      this.nombreImagenPlataforma = "spotify";
-    }
     this.tiempoDuracion = tiempoDuracion;
-    this.total = tiempoDuracion * this.precio;
+    this.precio = precio;
+    this.nombreImagenPlataforma = nombreImagenPlataforma;
+    this.total = this.tiempoDuracion * this.precio;
   }
 }
 class Tarjeta {

@@ -2,36 +2,43 @@
   {
     "idPlataforma": "netflix",
     "plataforma": "Netflix",
-    "precio": 12
+    "precio": 12,
+    "color": "#f84440"
   },
   {
     "idPlataforma": "movistar-play",
     "plataforma": "Movistar Play",
-    "precio": 5
+    "precio": 5,
+    "color": "#009ff7"
   },
   {
     "idPlataforma": "disney-plus",
     "plataforma": "Disney Plus",
-    "precio": 7
+    "precio": 7,
+    "color": "#05009d"
   },
   {
     "idPlataforma": "star-plus",
     "plataforma": "Star Plus",
-    "precio": 7
+    "precio": 7,
+    "color": "#ff5400"
   },
   {
     "idPlataforma": "hbo-max",
     "plataforma": "HBO Max",
-    "precio": 8
+    "precio": 8,
+    "color": "#9200bb"
   },
   {
     "idPlataforma": "prime-video",
     "plataforma": "Prime Video",
-    "precio": 7
+    "precio": 7,
+    "color": "#d0009c"
   },
   {
     "idPlataforma": "spotify",
     "plataforma": "Spotify",
-    "precio": 7
+    "precio": 7,
+    "color": "#18d860"
   }
 ]

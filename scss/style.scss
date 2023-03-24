@@ -12,6 +12,7 @@ $modal-content-bg: black;
 $modal-header-border-width: 0;
 $dropdown-divider-bg: white;
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./plataformas.scss";
 html {
   font-size: 85%;
 }
@@ -103,26 +104,12 @@ header {
   border-style: solid;
   border-width: 10px;
   border-radius: 10px;
-  &--netflix {
-    border-color: #f84440;
-  }
-  &--movistar-play {
-    border-color: #009ff7;
-  }
-  &--disney-plus {
-    border-color: #05009d;
-  }
-  &--star-plus {
-    border-color: #ff5400;
-  }
-  &--hbo-max {
-    border-color: #9200bb;
-  }
-  &--prime-video {
-    border-color: #d0009c;
-  }
-  &--spotify {
-    border-color: #18d860;
+  @each $plataforma in $plataformas {
+    $color: map-get($plataforma, "color");
+    $idPlataforma: map-get($plataforma, "idPlataforma");
+    &--#{$idPlataforma} {
+      border-color: $color;
+    }
   }
   &--6 {
     max-width: 5rem;
@@ -147,33 +134,13 @@ header {
   width: fit-content;
   max-width: 20rem;
   border-radius: 10px;
-  &--netflix {
-    background-color: #f84440;
-    box-shadow: -20px 30px 144px -19px #f84440cc;
-  }
-  &--movistar-play {
-    background-color: #009ff7;
-    box-shadow: -20px 30px 144px -19px #009ff7cc;
-  }
-  &--disney-plus {
-    background-color: #05009d;
-    box-shadow: -20px 30px 144px -19px #05009dcc;
-  }
-  &--star-plus {
-    background-color: #ff5400;
-    box-shadow: -20px 30px 144px -19px #ff5400cc;
-  }
-  &--hbo-max {
-    background-color: #9200bb;
-    box-shadow: -20px 30px 144px -19px #9200bbcc;
-  }
-  &--prime-video {
-    background-color: #d0009c;
-    box-shadow: -20px 30px 144px -19px #d0009ccc;
-  }
-  &--spotify {
-    background-color: #18d860;
-    box-shadow: -20px 30px 144px -19px #18d860cc;
+  @each $plataforma in $plataformas {
+    $color: map-get($plataforma, "color");
+    $idPlataforma: map-get($plataforma, "idPlataforma");
+    &--#{$idPlataforma} {
+      background-color: $color;
+      box-shadow: -20px 30px 144px -19px #{$color}cc;
+    }
   }
   &__buttons {
     &__months {
@@ -195,52 +162,6 @@ header {
   }
   &__link {
     color: #47c0f0;
-  }
-}
-.account-card {
-  &--netflix {
-    box-shadow: -20px 20px 30px #f8444054;
-  }
-  &--movistar-play {
-    box-shadow: -20px 20px 30px #009ff754;
-  }
-  &--disney-plus {
-    box-shadow: -20px 20px 30px #05009d54;
-  }
-  &--star-plus {
-    box-shadow: -20px 20px 30px #ff540054;
-  }
-  &--hbo-max {
-    box-shadow: -20px 20px 30px #9200bb54;
-  }
-  &--prime-video {
-    box-shadow: -20px 20px 30px #d0009c54;
-  }
-  &--spotify {
-    box-shadow: -20px 20px 30px #18d86054;
-  }
-  &__text {
-    &--netflix {
-      color: #f84440;
-    }
-    &--movistar-play {
-      color: #009ff7;
-    }
-    &--disney-plus {
-      color: #05009d;
-    }
-    &--star-plus {
-      color: #ff5400;
-    }
-    &--hbo-max {
-      color: #9200bb;
-    }
-    &--prime-video {
-      color: #d0009c;
-    }
-    &--spotify {
-      color: #18d860;
-    }
   }
 }
 .modal-dialog,

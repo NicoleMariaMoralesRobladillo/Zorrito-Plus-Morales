@@ -11750,31 +11750,31 @@ header {
 }
 .streamingCard--netflix {
   background-color: #f84440;
-  box-shadow: -20px 30px 144px -19px rgba(248, 68, 64, 0.8);
+  box-shadow: -20px 30px 144px -19px #f84440cc;
 }
 .streamingCard--movistar-play {
   background-color: #009ff7;
-  box-shadow: -20px 30px 144px -19px rgba(0, 159, 247, 0.8);
+  box-shadow: -20px 30px 144px -19px #009ff7cc;
 }
 .streamingCard--disney-plus {
   background-color: #05009d;
-  box-shadow: -20px 30px 144px -19px rgba(5, 0, 157, 0.8);
+  box-shadow: -20px 30px 144px -19px #05009dcc;
 }
 .streamingCard--star-plus {
   background-color: #ff5400;
-  box-shadow: -20px 30px 144px -19px rgba(255, 84, 0, 0.8);
+  box-shadow: -20px 30px 144px -19px #ff5400cc;
 }
 .streamingCard--hbo-max {
   background-color: #9200bb;
-  box-shadow: -20px 30px 144px -19px rgba(146, 0, 187, 0.8);
+  box-shadow: -20px 30px 144px -19px #9200bbcc;
 }
 .streamingCard--prime-video {
   background-color: #d0009c;
-  box-shadow: -20px 30px 144px -19px rgba(208, 0, 156, 0.8);
+  box-shadow: -20px 30px 144px -19px #d0009ccc;
 }
 .streamingCard--spotify {
   background-color: #18d860;
-  box-shadow: -20px 30px 144px -19px rgba(24, 216, 96, 0.8);
+  box-shadow: -20px 30px 144px -19px #18d860cc;
 }
 .streamingCard__buttons__months__input {
   max-width: 5rem;
@@ -11789,49 +11789,6 @@ header {
 }
 .form__link {
   color: #47c0f0;
-}
-
-.account-card--netflix {
-  box-shadow: -20px 20px 30px rgba(248, 68, 64, 0.3294117647);
-}
-.account-card--movistar-play {
-  box-shadow: -20px 20px 30px rgba(0, 159, 247, 0.3294117647);
-}
-.account-card--disney-plus {
-  box-shadow: -20px 20px 30px rgba(5, 0, 157, 0.3294117647);
-}
-.account-card--star-plus {
-  box-shadow: -20px 20px 30px rgba(255, 84, 0, 0.3294117647);
-}
-.account-card--hbo-max {
-  box-shadow: -20px 20px 30px rgba(146, 0, 187, 0.3294117647);
-}
-.account-card--prime-video {
-  box-shadow: -20px 20px 30px rgba(208, 0, 156, 0.3294117647);
-}
-.account-card--spotify {
-  box-shadow: -20px 20px 30px rgba(24, 216, 96, 0.3294117647);
-}
-.account-card__text--netflix {
-  color: #f84440;
-}
-.account-card__text--movistar-play {
-  color: #009ff7;
-}
-.account-card__text--disney-plus {
-  color: #05009d;
-}
-.account-card__text--star-plus {
-  color: #ff5400;
-}
-.account-card__text--hbo-max {
-  color: #9200bb;
-}
-.account-card__text--prime-video {
-  color: #d0009c;
-}
-.account-card__text--spotify {
-  color: #18d860;
 }
 
 .modal-dialog,
