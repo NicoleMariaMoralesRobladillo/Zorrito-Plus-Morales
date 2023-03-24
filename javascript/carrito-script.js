@@ -209,6 +209,10 @@ segundoButtonComprar.addEventListener("click", function (e) {
     );
     let indiceUsuario = localStorage.getItem("indiceUsuarioIniciadoSesion");
     ejecutarCompra(indiceUsuario, nuevaTarjeta);
+    let nombrePagina = document.getElementsByTagName("title")[0].innerText;
+    if (nombrePagina == "Mis cuentas | Zorrito +") {
+      window.location.reload();
+    }
   } else {
     addCreditCardModal.hide();
     mostrarModal("mensajeFormularioTarjetaIncompleto");
