@@ -1,4 +1,6 @@
-fetch("../json/plataformas.json")
+fetch(
+  "https://nicolemariamoralesrobladillo.github.io/Zorrito-Plus-Morales/json/plataformas.json"
+)
   .then((response) => response.json()) //parametro => retorno
   .then(function (data) {
     let iconosPlataformasBox = document.getElementById("iconosPlataformasBox");
