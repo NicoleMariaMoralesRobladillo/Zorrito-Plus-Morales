@@ -38,7 +38,12 @@ Array.from(streamingCard__buttons__cart).forEach(function (element) {
     insertarDivItemCarrito(nuevoItemCarrito);
     actualizarTotalItemsCarrito();
     Toastify({
-      text: "El ítem se ha añadido correctamente al carrito.",
+      text:
+        plataforma +
+        " por " +
+        tiempoDuracion.value +
+        " mes(es) " +
+        "se ha añadido correctamente al carrito.",
       close: false,
       duration: 3000,
       gravity: "top",
