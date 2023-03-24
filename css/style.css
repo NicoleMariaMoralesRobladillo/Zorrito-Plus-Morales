@@ -11715,7 +11715,7 @@ header {
 .icono--star-plus {
   border-color: #ff5400;
 }
-.icono--HBO-max {
+.icono--hbo-max {
   border-color: #9200bb;
 }
 .icono--prime-video {
@@ -11764,7 +11764,7 @@ header {
   background-color: #ff5400;
   box-shadow: -20px 30px 144px -19px rgba(255, 84, 0, 0.8);
 }
-.streamingCard--HBO-max {
+.streamingCard--hbo-max {
   background-color: #9200bb;
   box-shadow: -20px 30px 144px -19px rgba(146, 0, 187, 0.8);
 }
@@ -11803,7 +11803,7 @@ header {
 .account-card--star-plus {
   box-shadow: -20px 20px 30px rgba(255, 84, 0, 0.3294117647);
 }
-.account-card--HBO-max {
+.account-card--hbo-max {
   box-shadow: -20px 20px 30px rgba(146, 0, 187, 0.3294117647);
 }
 .account-card--prime-video {
@@ -11824,7 +11824,7 @@ header {
 .account-card__text--star-plus {
   color: #ff5400;
 }
-.account-card__text--HBO-max {
+.account-card__text--hbo-max {
   color: #9200bb;
 }
 .account-card__text--prime-video {

@@ -1,0 +1,37 @@
+[
+  {
+    "idPlataforma": "netflix",
+    "plataforma": "Netflix",
+    "precio": 12
+  },
+  {
+    "idPlataforma": "movistar-play",
+    "plataforma": "Movistar Play",
+    "precio": 5
+  },
+  {
+    "idPlataforma": "disney-plus",
+    "plataforma": "Disney Plus",
+    "precio": 7
+  },
+  {
+    "idPlataforma": "star-plus",
+    "plataforma": "Star Plus",
+    "precio": 7
+  },
+  {
+    "idPlataforma": "hbo-max",
+    "plataforma": "HBO Max",
+    "precio": 8
+  },
+  {
+    "idPlataforma": "prime-video",
+    "plataforma": "Prime Video",
+    "precio": 7
+  },
+  {
+    "idPlataforma": "spotify",
+    "plataforma": "Spotify",
+    "precio": 7
+  }
+]

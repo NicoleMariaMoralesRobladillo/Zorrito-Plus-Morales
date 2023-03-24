@@ -23,7 +23,7 @@ class ItemCarrito {
       this.nombreImagenPlataforma = "star-plus";
     } else if (plataforma == "HBO Max") {
       this.precio = 8;
-      this.nombreImagenPlataforma = "HBO-max";
+      this.nombreImagenPlataforma = "hbo-max";
     } else if (plataforma == "Prime Video") {
       this.precio = 7;
       this.nombreImagenPlataforma = "prime-video";

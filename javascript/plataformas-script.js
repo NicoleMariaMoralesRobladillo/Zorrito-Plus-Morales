@@ -18,9 +18,9 @@ Array.from(streamingCard__buttons__cart).forEach(function (element) {
     } else if (idPlataforma == "streamingCard__buttons__cart--star-plus") {
       plataforma = "Star Plus";
       idTiempoDuracion = "meses-pago-star-plus";
-    } else if (idPlataforma == "streamingCard__buttons__cart--HBO-max") {
+    } else if (idPlataforma == "streamingCard__buttons__cart--hbo-max") {
       plataforma = "HBO Max";
-      idTiempoDuracion = "meses-pago-HBO-max";
+      idTiempoDuracion = "meses-pago-hbo-max";
     } else if (idPlataforma == "streamingCard__buttons__cart--prime-video") {
       plataforma = "Prime Video";
       idTiempoDuracion = "meses-pago-prime-video";
